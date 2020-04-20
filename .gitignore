@@ -1,0 +1,41 @@
+# production
+/build
+
+# Logs
+*.log
+
+# Editor
+.DS_Store
+*.swp
+.idea
+.cache
+.archives
+
+# Coverage directory used by tools like Istanbul
+coverage
+
+# A11y files
+a11y/results
+
+# Lock Files
+package-lock.json
+yarn.lock
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+__snapshots__/
+test-report.xml
+
+#codecept-tests
+output/
+allure-report/
+reports/
+.vscode
+/.idea
+/.vs
+
