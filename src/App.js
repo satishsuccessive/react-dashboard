@@ -4,7 +4,7 @@ import { Dashboard } from './modules/dashboard';
 class App extends React.PureComponent {
 render(){
   return(
-    <Dashboard />
+     <Dashboard />
   );
 }
 }
