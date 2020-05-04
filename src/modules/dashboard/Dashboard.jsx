@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Button } from '../../components'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Dashboard extends React.PureComponent{
     render(){

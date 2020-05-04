@@ -1,10 +1,10 @@
 import React from 'react';
 import { Dashboard } from './modules/dashboard';
 
-class App extends React.PureComponent() {
+class App extends React.PureComponent {
 render(){
   return(
-<Dashboard />
+    <Dashboard />
   );
 }
 }
