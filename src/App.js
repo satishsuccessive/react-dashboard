@@ -1,5 +1,6 @@
 import React from 'react';
-import { Dashboard } from './modules/dashboard';
+import './global.css'
+import { Dashboard } from './modules';
 
 class App extends React.PureComponent {
 render(){
