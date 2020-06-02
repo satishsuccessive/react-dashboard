@@ -1,6 +1,7 @@
 export {
     Card,
     Breadcum,
+    Box,
     StyledBreadcum,
     StackChart,
     Button,

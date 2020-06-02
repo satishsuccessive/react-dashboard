@@ -1,1 +1,1 @@
-export { default as UpdateAverage } from './UpdateAverage';
+export { default } from './UpdateAverage';
