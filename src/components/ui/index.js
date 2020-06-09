@@ -7,5 +7,8 @@ export {
     Button,
     Row,
     Container,
+    Sidebar,
     Col,
+    Icon,
+    Spinner,
 } from '@stack-ui/components';
