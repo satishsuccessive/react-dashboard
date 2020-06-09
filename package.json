@@ -16,7 +16,14 @@
     "webpack-dev-server": "3.10.3",
     "styled-components": "^5.0.1",
     "bootstrap": "^4.3.1",
-    "babel-eslint": "10.1.0"
+    "babel-eslint": "10.1.0",
+    "@fortawesome/fontawesome-free-regular": "^5.0.13",
+    "@fortawesome/fontawesome-free-solid": "^5.0.13",
+    "@fortawesome/fontawesome-svg-core": "^1.2.28",
+    "@fortawesome/free-brands-svg-icons": "^5.13.0",
+    "@fortawesome/free-regular-svg-icons": "^5.13.0",
+    "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "@fortawesome/react-fontawesome": "^0.1.9"
   },
   "scripts": {
     "start": "react-scripts start",
