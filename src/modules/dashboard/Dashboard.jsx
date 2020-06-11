@@ -42,7 +42,6 @@ class Dashboard extends React.PureComponent {
                                 <Card>
                                     <Box p="10px">{items.title}</Box>
                                     <Box display="flex" justifyContent="space-between">
-
                                         <StackChart type="radialBar" width={100} height={150} options={{
                                         }} series={[39, 89, 13]} label="abd" />
                                         <Box display="flex" flexDirection="column" justifyContent="flex-end" alignItems="flex-end">
