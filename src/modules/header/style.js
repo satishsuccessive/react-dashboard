@@ -3,18 +3,20 @@ import styled from 'styled-components';
 export const HeaderWrapper = styled.span`{
     .headerWrap {
         background-color: #fff;
-        padding: 0 3% 0 3%;
         position: fixed;
         display: flex;
         align-items: center;
         left: 0;
         right: 0; 
         height: 70px;
-        margin-left: 13.4%;
+        left:250px;
         top: 0px;
-        z-index: 0;
+        z-index: 9;
         -webkit-box-shadow: 0 0 35px 0 rgba(61,69,78,.15);
         box-shadow: 0 0 35px 0 rgba(61,69,78,.15)
+    }
+    .headerWrap > div {
+     width:100%;
     }
     .listing {
         list-style-type: none;
@@ -30,6 +32,7 @@ export const HeaderWrapper = styled.span`{
         display:flex;
         align-items:center;
         height:100%;
+        font-size:16px;
     }
     .listing > li a:hover{
        background-color:rgba(65,77,95,.05);
@@ -37,7 +40,6 @@ export const HeaderWrapper = styled.span`{
     .listing a{
         padding: 0 15px;
     color: #6C757E;
-    min-width: 32px;
     display: block;
     max-height: 70px;
     text-decoration:none;
@@ -62,5 +64,26 @@ export const HeaderWrapper = styled.span`{
         padding:.45rem 1.2rem;
         font-size:15px;
 
+    }
+    .flex{
+        display:flex;
+    }
+    .avtarWrap{
+        width:80%;
+        
+    }
+    .avtarWrap > img{
+        display:inline-block;
+        padding:20px;
+    }
+    .avtarWrap > img:hover{
+        background-color:rgba(65,77,95,.05);
+    }
+
+    .listing.menuSetting{
+    position:relative;
+    }
+    .iconwrap{
+        margin-right:1rem;
     }
  }`;

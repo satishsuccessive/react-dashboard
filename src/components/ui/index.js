@@ -11,4 +11,6 @@ export {
     Col,
     Icon,
     Spinner,
+    Avatar,
+    SearchBox
 } from '@stack-ui/components';
