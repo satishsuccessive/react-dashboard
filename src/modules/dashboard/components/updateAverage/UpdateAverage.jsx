@@ -36,7 +36,7 @@ class UpdateAverage extends React.PureComponent{
                         cardDetails.map(items => (
                             <Box p="10px" style={{ width: "23%" }}>
                                 <Card>
-                                    <Box p="10px">{items.title}</Box>
+                                    <Box><h3>{items.title}</h3></Box>
                                     <Box display="flex" justifyContent="space-between">
                                         <StackChart
                                             type="radialBar"
@@ -52,7 +52,7 @@ class UpdateAverage extends React.PureComponent{
                                             // label="abd"
                                         />
                                         <Box display="flex" flexDirection="column" justifyContent="flex-end" alignItems="flex-end">
-                                            <h3>{items.count}</h3>
+                                            <strong>{items.count}</strong>
                                             <span>{items.last}</span>
                                         </Box>
                                     </Box>
