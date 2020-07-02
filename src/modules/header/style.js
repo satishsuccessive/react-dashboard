@@ -70,7 +70,9 @@ export const HeaderWrapper = styled.span`{
     }
     .avtarWrap{
         width:80%;
-        
+        input{
+            padding:10px 16px 10px;
+        }
     }
     .avtarWrap > img{
         display:inline-block;
