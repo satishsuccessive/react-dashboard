@@ -14,7 +14,7 @@ import React, { Component } from 'react';
         return (
            <ul>
           {options.map((item, key) => (
-        <li><a href="#" >{item.item}</a>
+        <li><a href="#" >{item.icon}{item.item}</a>
         </li>
           ))}
            </ul> );
