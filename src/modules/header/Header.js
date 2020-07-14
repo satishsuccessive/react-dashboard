@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { HeaderWrapper } from './style';
 import { DropdownMenu } from '../../components/dropdownMenu';
 import { SearchBox, Box, Avatar, Button } from '../../components';
-
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faSearch , faBell, faCog} from '@fortawesome/free-solid-svg-icons';
 
 
 class Header extends Component {
@@ -80,7 +80,7 @@ class Header extends Component {
         <HeaderWrapper>
           <header className="headerWrap">
             <Box display="flex" alignItems="center">
-              <span>&#9776;</span>
+            <FontAwesomeIcon className="faIcon" icon={faBars} />
               <Box display="flex"> <ul className="listing" >
                 <li onClick={(e) => this.handleClick(e)}><a href="#">Reports &#11167;
     {isVisible ? <DropdownMenu options={this.option} /> : null}
@@ -92,7 +92,9 @@ class Header extends Component {
 
               <Box className="avtarWrap" display="flex" alignItems="center" justifyContent="flex-end">
                 <SearchBox className="searchBox" bg="#f1f5f7" borderRadius="30px 0 0 30px" size="md" placeholder="Search... ">
-                  <Button borderRadius="0 30px 30px 0" size="md" btnType="#f1f5f7" btnVariant="contained" icon="search" color="#6c757d"> </Button>
+                  <Button borderRadius="0 30px 30px 0" size="md" btnType="#f1f5f7" btnVariant="contained" icon="search" color="#6c757d"> 
+                  <FontAwesomeIcon className="faIcon" icon={faSearch} />
+                  </Button>
                 </SearchBox>
                 <Avatar size="sm" src="https://coderthemes.com/upvex/layouts/light/assets/images/users/user-1.jpg" alt="smallAvatar" />
                 <ul className="listing menuSetting" >
@@ -100,8 +102,12 @@ class Header extends Component {
     {isClicked ? <DropdownMenu options={this.accountoptions} /> : null}
                   </a></li>
                 </ul>
-                <span className="iconwrap">&#x1f514;</span>
-                <span>&#9881;</span>
+                <span className="iconwrap">
+            <FontAwesomeIcon className="faIcon" icon={faBell} />
+
+                </span>
+                <FontAwesomeIcon className="faIcon" icon={faCog} />
+
               </Box>
 
             </Box>

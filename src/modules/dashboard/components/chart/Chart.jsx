@@ -1,5 +1,7 @@
 import React from 'react';
 import { StackChart, Col, Box, Card } from '../../../../components';
+import { CardWrapper } from './style';
+
 
 class Chart extends React.PureComponent{
     render(){
@@ -7,8 +9,9 @@ class Chart extends React.PureComponent{
         const name = 'Sales Analytics';
         const categories= ['1jan', '1feb', '1march', '1apr', '1may', '1june', '1july', '1aug'];
         return (
-          <Box display="flex">
-          <Box><Card cardTitle="sales Analytics">
+         <CardWrapper>
+          <Box display="flex" justifyContent="space-between">
+          <Box><Card style={{minHeight:"475px"}}  cardTitle="Sales Analytics">
             <Box p="20px">
             <StackChart type="bar" width={652} height={285} options={{
                 chart: {
@@ -24,7 +27,7 @@ class Chart extends React.PureComponent{
             </Box>
             </Card>
             </Box>
-          <Box><Card><Box p="20px">
+          <Box style={{width:'60%'}}><Card style={{minHeight:"475px"}} cardTitle="Graph Anaylsis"><Box p="20px">
               <Col xl="6">
                   <StackChart type="line" width={500} height={320} options={{
                       chart: {
@@ -39,8 +42,8 @@ class Chart extends React.PureComponent{
                   }]} />
               </Col>
           </Box></Card></Box>
-
       </Box>
+      </CardWrapper>
         )
 }
 }

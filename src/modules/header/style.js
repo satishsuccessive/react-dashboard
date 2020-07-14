@@ -88,4 +88,10 @@ export const HeaderWrapper = styled.span`{
     .iconwrap{
         margin-right:1rem;
     }
+    .faIcon{
+        font-size:18px;
+    }
+    form {
+        display:flex;
+    }
  }`;
