@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, StackChart, Row, Col } from '../../components'
+import { Box, StackChart, Row, Col } from '@stack-ui/components'
 import { Sidebar, Chart, Card, TopHeader, UpdateAverage } from './components';
 
 class Dashboard extends React.PureComponent {

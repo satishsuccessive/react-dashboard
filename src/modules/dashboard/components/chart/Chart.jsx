@@ -1,5 +1,5 @@
 import React from 'react';
-import { StackChart, Col, Box, Card } from '../../../../components';
+import { StackChart, Col, Box, Card } from '@stack-ui/components';
 import { CardWrapper } from './style';
 
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box } from '../../../../components';
+import { Box } from '@stack-ui/components';
 import {Header} from '../../../header';
 
 class TopHeader extends React.PureComponent {
