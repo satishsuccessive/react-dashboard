@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sidebar, Box } from '../../../../components';
+import { Sidebar, Box } from '@stack-ui/components';
 
 const sideNavigation = [{
     title: "Dashboards",

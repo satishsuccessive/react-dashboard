@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from '../../../../components';
+import { Card } from '@stack-ui/components';
 
 class CardComponent extends React.PureComponent{
     render() {
@@ -9,4 +9,4 @@ class CardComponent extends React.PureComponent{
     }
 }
 
-export default Card;
+export default CardComponent;

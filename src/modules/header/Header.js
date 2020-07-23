@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { HeaderWrapper } from './style';
 import { DropdownMenu } from '../../components/dropdownMenu';
-import { SearchBox, Box, Avatar, Button } from '../../components';
+import { SearchBox, Box, Avatar, Button } from '@stack-ui/components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faSearch , faBell, faCog} from '@fortawesome/free-solid-svg-icons';
 

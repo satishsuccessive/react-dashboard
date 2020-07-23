@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Card, StackChart } from '../../../../components';
+import { Box, Card, StackChart } from '@stack-ui/components';
 
 const cardDetails = [{
     title: "New Customers",
@@ -48,7 +48,8 @@ class UpdateAverage extends React.PureComponent{
                                                 labels: 'Progress'
                                                  }
                                                 }}
-                                            series={[items.seriesCount]}
+                                                series={[33, 75]}
+                                            // series={[items.seriesCount]}
                                             // label="abd"
                                         />
                                         <Box display="flex" flexDirection="column" justifyContent="flex-end" alignItems="flex-end">
