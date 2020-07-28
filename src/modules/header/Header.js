@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { HeaderWrapper } from './style';
 import { DropdownMenu } from '../../components/dropdownMenu';
 import { SearchBox, Box, Avatar, Button } from '@stack-ui/components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -77,7 +76,6 @@ class Header extends Component {
 
     return (
       <>
-        <HeaderWrapper>
           <header className="headerWrap">
             <Box display="flex" alignItems="center">
             <FontAwesomeIcon className="faIcon" icon={faBars} />
@@ -112,7 +110,6 @@ class Header extends Component {
 
             </Box>
           </header>
-        </HeaderWrapper>
       </>
     )
   }
