@@ -1,14 +1,14 @@
 import React from 'react';
 import './global.css'
 import { Dashboard } from './modules/dashboard';
-import { Header } from './modules/header';
+import { HeaderWrapper } from './modules/header';
 
 
 class App extends React.PureComponent {
   render() {
     return (
       <>
-       <Header />
+       <HeaderWrapper />
         <Dashboard />
       </>
     );

@@ -1,0 +1,31 @@
+export const cardDetails = [{
+    title: "New Customers",
+    percentage: "58",
+    count: 268,
+    last: "Since last week",
+    seriesCount: 58,
+    variant: "primary",
+  },
+  {
+    title: "Online Orders",
+    percentage: "80",
+    count: 8715,
+    last: "Since last month",
+    seriesCount: 80,
+    variant: "success",
+  },
+  {
+    title: "revenue",
+    percentage: "77",
+    count: "$925",
+    last: "This week",
+    seriesCount: 77,
+    variant: "primary",
+  }, {
+    title: "Daily Average",
+    percentage: "35",
+    count: "$78.83",
+    last: "Revenue today",
+    seriesCount: 35,
+    variant: "success",
+  }]
