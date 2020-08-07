@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { DropdownMenu } from '../../components/dropdownMenu';
-import { SearchBox, Box, Avatar, Button } from '@stack-ui/components';
+import { SearchBox, Box, Avatar, Button, Header } from '@stack-ui/components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faSearch , faBell, faCog} from '@fortawesome/free-solid-svg-icons';
+import { faBars, faSearch, faBell, faCog } from '@fortawesome/free-solid-svg-icons';
+import { StyledHeader } from './style';
 
 
-class Header extends Component {
+class HeaderWrapper extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -73,49 +74,47 @@ class Header extends Component {
 
   render() {
     const { isVisible, isClicked } = this.state;
-
     return (
-      <>
-          <header className="headerWrap">
-            <Box display="flex" alignItems="center">
+      <StyledHeader>
+        <Header mode="light" fixed className="xx">
+          <Box display="flex" justifyContent="space-between" p="0px">
+            <Box style={{ color: "#000" }} p="0px" m="0px">
+              abc
             <FontAwesomeIcon className="faIcon" icon={faBars} />
-              <Box display="flex"> <ul className="listing" >
-                <li onClick={(e) => this.handleClick(e)}><a href="#">Reports &#11167;
-    {isVisible ? <DropdownMenu options={this.option} /> : null}
-                </a></li>
-              </ul>
-              </Box>
-
-
-
-              <Box className="avtarWrap" display="flex" alignItems="center" justifyContent="flex-end">
-                <SearchBox className="searchBox" bg="#f1f5f7" borderRadius="30px 0 0 30px" size="md" placeholder="Search... ">
-                  <Button borderRadius="0 30px 30px 0" size="md" btnType="#f1f5f7" btnVariant="contained" icon="search" color="#6c757d"> 
-                  <FontAwesomeIcon className="faIcon" icon={faSearch} />
+            </Box>
+            <Box style={{ color: "#000" }} p="0px" m="0px" display="flex" alignItems="center">
+              <Box mr="20px" p="0px" m="0px">
+                <SearchBox className="searchBox.................." bg="#f1f5f7" borderRadius="30px 0 0 30px" size="md" placeholder="Search... ">
+                  <Button className="btnn" borderRadius="0 30px 30px 0" size="md" btnType="#f1f5f7" btnVariant="contained" icon="search" color="#6c757d">
+                    <FontAwesomeIcon className="faIcon" icon={faSearch} />
                   </Button>
                 </SearchBox>
-                <Avatar size="sm" src="https://coderthemes.com/upvex/layouts/light/assets/images/users/user-1.jpg" alt="smallAvatar" />
-                <ul className="listing menuSetting" >
-                  <li onClick={(e) => this.handleclickEvent(e)}><a href="#">Marcia J &#11167;
-    {isClicked ? <DropdownMenu options={this.accountoptions} /> : null}
-                  </a></li>
-                </ul>
-                <span className="iconwrap">
-            <FontAwesomeIcon className="faIcon" icon={faBell} />
-
-                </span>
-                <FontAwesomeIcon className="faIcon" icon={faCog} />
-
               </Box>
-
+              <Box mr="20px" p="0px" m="0px">
+                <FontAwesomeIcon className="faIcon" icon={faBell} />
+              </Box>
+              <Box mr="20px" p="0px" m="0px" display="flex">
+                <Avatar size="sm" src="https://coderthemes.com/upvex/layouts/light/assets/images/users/user-1.jpg" alt="smallAvatar" />
+                <Box>
+                  <ul className="listing menuSetting" >
+                    <li onClick={(e) => this.handleclickEvent(e)}><a href="#">Marcia J &#11167;
+    {/* {isClicked ? <DropdownMenu options={this.accountoptions} /> : null} */}
+                    </a></li>
+                  </ul>
+                </Box>
+              </Box>
+              <Box p="0px" m="0px">
+              <FontAwesomeIcon className="faIcon" icon={faCog} />
+              </Box>
             </Box>
-          </header>
-      </>
+          </Box>
+        </Header>
+      </StyledHeader>
     )
   }
 }
 
-export default (Header);
+export default (HeaderWrapper);
 
 
 
