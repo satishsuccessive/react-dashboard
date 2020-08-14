@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { DropdownMenu } from '../../components/dropdownMenu';
 import { SearchBox, Box, Avatar, Button, Header } from '@stack-ui/components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,7 +6,7 @@ import { faBars, faSearch, faBell, faCog } from '@fortawesome/free-solid-svg-ico
 import { StyledHeader } from './style';
 
 
-class HeaderWrapper extends Component {
+class HeaderWrapper extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -79,7 +79,6 @@ class HeaderWrapper extends Component {
         <Header mode="light" fixed className="xx">
           <Box display="flex" justifyContent="space-between" p="0px">
             <Box style={{ color: "#000" }} p="0px" m="0px">
-              abc
             <FontAwesomeIcon className="faIcon" icon={faBars} />
             </Box>
             <Box style={{ color: "#000" }} p="0px" m="0px" display="flex" alignItems="center">
