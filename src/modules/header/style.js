@@ -13,13 +13,6 @@ export const StyledHeader = styled.div`{
             outline: none;
         }
     }
-    .btnn{
-        padding: 12px 16px;
-    }
-    .fa-bell, .fa-cog{
-        font-size: 25px;
-        color: #ddd;
-    }
     .listing{
         list-style-type:none;
         li{
