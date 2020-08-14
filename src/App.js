@@ -1,18 +1,11 @@
-import React from 'react';
-import './global.css'
+import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Dashboard } from './modules/dashboard';
-import { HeaderWrapper } from './modules/header';
-
+import "./global.css";
+import Routes from "./Routes";
 
 class App extends React.PureComponent {
   render() {
-    return (
-      <>
-       <HeaderWrapper />
-        <Dashboard />
-      </>
-    );
+    return <Routes />;
   }
 }
 
