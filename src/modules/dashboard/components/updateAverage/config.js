@@ -4,7 +4,7 @@ export const cardDetails = [{
     count: 268,
     last: "Since last week",
     seriesCount: 58,
-    variant: "primary",
+    strokeColor: "rgb(240, 80, 80)",
   },
   {
     title: "Online Orders",
@@ -12,20 +12,20 @@ export const cardDetails = [{
     count: 8715,
     last: "Since last month",
     seriesCount: 80,
-    variant: "success",
+    strokeColor: "rgb(103, 93, 183)",
   },
   {
-    title: "revenue",
+    title: "Revenue",
     percentage: "77",
     count: "$925",
     last: "This week",
     seriesCount: 77,
-    variant: "primary",
+    strokeColor: "rgb(35, 179, 151)",
   }, {
     title: "Daily Average",
     percentage: "35",
     count: "$78.83",
     last: "Revenue today",
     seriesCount: 35,
-    variant: "success",
+    strokeColor: "rgb(255, 189, 74)",
   }]

@@ -1,13 +1,13 @@
 import React from 'react'
-import { Box } from '@stack-ui/components';
+import { Box, Typography } from '@stack-ui/components';
 
 class TopHeader extends React.PureComponent {
     render() {
         return (
-            <Box display="flex" p="0 30px" justifyContent="space-between">
-            <p>Dashboard</p>
-            <p>Upvex / Dashboard / Dashboard2</p>
-        </Box>
+            <Box display="flex" p="10px" justifyContent="space-between">
+                <Typography as="h3" isBold>Dashboard 2</Typography>
+                <Typography as="h5">Stack UI > Dashboard > Dashboard 2</Typography>
+            </Box>
         )
     }
 }
