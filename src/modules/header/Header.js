@@ -1,6 +1,6 @@
 import React from 'react'
 import { DropdownMenu } from '../../components/dropdownMenu';
-import { SearchBox, Box, Avatar, Button, Header } from '@stack-ui/components';
+import { SearchBox, Box, Avatar, Button, Header, Icon } from '@stack-ui/components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faSearch, faBell, faCog } from '@fortawesome/free-solid-svg-icons';
 import { StyledHeader } from './style';
@@ -84,8 +84,8 @@ class HeaderWrapper extends React.PureComponent {
             <Box style={{ color: "#000" }} p="0px" m="0px" display="flex" alignItems="center">
               <Box mr="20px" p="0px" m="0px">
                 <SearchBox className="searchBox.................." bg="#f1f5f7" borderRadius="30px 0 0 30px" size="md" placeholder="Search... ">
-                  <Button className="btnn" borderRadius="0 30px 30px 0" size="md" btnType="#f1f5f7" btnVariant="contained" icon="search" color="#6c757d">
-                    <FontAwesomeIcon className="faIcon" icon={faSearch} />
+                  <Button borderRadius="0 30px 30px 0" size="md" btnType="#f1f5f7" btnVariant="contained" icon="search" color="#6c757d">
+                  <Icon size="25" icon="notification" />
                   </Button>
                 </SearchBox>
               </Box>
@@ -94,16 +94,15 @@ class HeaderWrapper extends React.PureComponent {
               </Box>
               <Box mr="20px" p="0px" m="0px" display="flex">
                 <Avatar size="sm" src="https://coderthemes.com/upvex/layouts/light/assets/images/users/user-1.jpg" alt="smallAvatar" />
-                <Box>
+                <Box display="flex" alignItems="center">
                   <ul className="listing menuSetting" >
                     <li onClick={(e) => this.handleclickEvent(e)}><a href="#">Marcia J &#11167;
-    {/* {isClicked ? <DropdownMenu options={this.accountoptions} /> : null} */}
                     </a></li>
                   </ul>
                 </Box>
               </Box>
               <Box p="0px" m="0px">
-              <FontAwesomeIcon className="faIcon" icon={faCog} />
+              <Icon size="25" icon="cog" />
               </Box>
             </Box>
           </Box>

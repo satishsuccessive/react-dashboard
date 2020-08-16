@@ -1,6 +1,5 @@
 import React from 'react';
 import { StackChart, Col, Box, Card } from '@stack-ui/components';
-import { CardWrapper } from './style';
 
 class Chart extends React.PureComponent {
   render() {
@@ -8,11 +7,11 @@ class Chart extends React.PureComponent {
     const name = 'Sales Analytics';
     const categories = ['1jan', '1feb', '1march', '1apr', '1may', '1june', '1july', '1aug'];
     return (
-      <CardWrapper>
-        <Box display="flex" justifyContent="space-between">
-          <Box><Card style={{ minHeight: "475px" }} cardTitle="Sales Analytics">
+        <Box display="flex" justifyContent="space-between" p="10px">
+          <Box mr="20px" width="50%">
+          <Card cardTitle="Sales Analytics">
             <Box p="20px">
-              <StackChart type="bar" width={652} height={285} options={{
+              <StackChart type="bar" options={{
                 chart: {
                   id: 'apexchart-example'
                 },
@@ -26,8 +25,9 @@ class Chart extends React.PureComponent {
             </Box>
           </Card>
           </Box>
-          <Box style={{ width: '60%' }}><Card style={{ minHeight: "475px" }} cardTitle="Graph Anaylsis"><Box p="20px">
-            <Col xl="6">
+          <Box width="50%">
+          <Card cardTitle="Graph Anaylsis">
+          <Box p="20px">
               <StackChart type="line" width={500} height={320} options={{
                 chart: {
                   id: 'apexchart-example'
@@ -39,10 +39,8 @@ class Chart extends React.PureComponent {
                 name: 'series-1',
                 data: [30, 40, 45, 50, 49, 60, 70, 91]
               }]} />
-            </Col>
           </Box></Card></Box>
         </Box>
-      </CardWrapper>
     )
   }
 }
