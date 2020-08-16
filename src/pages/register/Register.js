@@ -1,5 +1,4 @@
 import React from "react";
-import { withRouter } from "react-router";
 import {
   InputGroup,
   Button,
@@ -8,17 +7,9 @@ import {
   Image,
 } from "@stack-ui/components";
 import { SIGN_IN_LOGO } from "../../utils/constant";
-import Auth from "../../Router/Auth";
 import { Link } from "react-router-dom";
 
-class SignIn extends React.PureComponent {
-  signIn = () => {
-    const { location, history } = this.props;
-    let { from } = location.state || { from: { pathname: "/dashboard" } };
-    Auth.authenticate(() => {
-      history.replace(from);
-    });
-  };
+class Register extends React.PureComponent {
   render() {
     return (
       <Box
@@ -36,7 +27,7 @@ class SignIn extends React.PureComponent {
               </Box>
               <Box width="72%" m="auto">
                 <Typography as="span" color="#98a6ad" textAlign="center">
-                  Enter your email address and password to access admin panel.
+                Don't have an account? Create your free account now
                 </Typography>
               </Box>
             </Box>
@@ -53,10 +44,17 @@ class SignIn extends React.PureComponent {
                 type="subHeading"
                 as="h4"
               >
-                SIGN IN
+              CREATE ACCOUNT
               </Typography>
             </Box>
             <Box p="35px 35px">
+            <Box mb="25px">
+            <InputGroup
+              labelText="Full Name"
+              type="text"
+              placeholder="Enter your name"
+            />
+          </Box>
               <Box mb="25px">
                 <InputGroup
                   labelText="Email address"
@@ -76,9 +74,9 @@ class SignIn extends React.PureComponent {
                 btnType="danger"
                 btnVariant="contained"
                 block="true"
-                onClick={this.signIn}
+                onClick={console.log('clicked')}
               >
-                Log In
+                Sign Up
               </Button>
             </Box>
             <Typography as="span" textAlign="center">
@@ -86,11 +84,11 @@ class SignIn extends React.PureComponent {
             </Typography>
           </Box>
           <Box m="20px 0" textAlign="center">
-            <Link to="/recover-password">Forgot your password?</Link>
+            <Link to="/recover-password">Sign up using</Link>
           </Box>
           <Box mb="100px">
           <Typography as="span" textAlign="center">
-            Don't have an account? <Link to="/register">Sign Up</Link>
+          Already have account? <Link to="/">Sign In</Link>
           </Typography>
           </Box>
           <Box mb="20px">
@@ -103,4 +101,4 @@ class SignIn extends React.PureComponent {
     );
   }
 }
-export default withRouter(SignIn);
+export default Register;
