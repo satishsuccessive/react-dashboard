@@ -11,7 +11,7 @@ class Chart extends React.PureComponent {
           <Box mr="20px" width="50%">
           <Card cardTitle="Sales Analytics">
             <Box p="20px">
-              <StackChart type="bar" options={{
+              <StackChart type="bar" height={320} options={{
                 chart: {
                   id: 'apexchart-example'
                 },
