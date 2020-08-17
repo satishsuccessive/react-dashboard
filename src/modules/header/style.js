@@ -31,7 +31,7 @@ export const StyledHeader = styled.div`{
         box-shadow: none;
     }
     .search button {
-        padding: 7px 15px;
+        padding: 9px 15px;
     }
     .listing{
         list-style-type:none;
