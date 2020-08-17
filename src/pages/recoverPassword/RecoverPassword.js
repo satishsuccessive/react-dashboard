@@ -1,5 +1,4 @@
 import React from "react";
-import { withRouter } from "react-router";
 import {
   InputGroup,
   Button,
@@ -8,17 +7,9 @@ import {
   Image,
 } from "@stack-ui/components";
 import { SIGN_IN_LOGO } from "../../utils/constant";
-import Auth from "../../Router/Auth";
 import { Link } from "react-router-dom";
 
-class SignIn extends React.PureComponent {
-  signIn = () => {
-    const { location, history } = this.props;
-    let { from } = location.state || { from: { pathname: "/dashboard" } };
-    Auth.authenticate(() => {
-      history.replace(from);
-    });
-  };
+class RecoverPassword extends React.PureComponent {
   render() {
     return (
       <Box
@@ -36,7 +27,7 @@ class SignIn extends React.PureComponent {
               </Box>
               <Box width="72%" m="auto">
                 <Typography as="span" color="#98a6ad" textAlign="center">
-                  Enter your email address and password to access admin panel.
+                Enter your email address and we'll send you an email with instructions to reset your password.
                 </Typography>
               </Box>
             </Box>
@@ -53,7 +44,7 @@ class SignIn extends React.PureComponent {
                 type="subHeading"
                 as="h4"
               >
-                SIGN IN
+              RECOVER PASSWORD
               </Typography>
             </Box>
             <Box p="35px 35px">
@@ -64,33 +55,20 @@ class SignIn extends React.PureComponent {
                   placeholder="Enter your email"
                 />
               </Box>
-              <Box mb="25px">
-                <InputGroup
-                  labelText="Password"
-                  type="password"
-                  placeholder="Enter your password"
-                />
-              </Box>
               <Button
                 size="lg"
                 btnType="danger"
                 btnVariant="contained"
                 block="true"
-                onClick={this.signIn}
+                onClick={console.log('clicked')}
               >
-                Log In
+                Reset Password
               </Button>
             </Box>
-            <Typography as="span" textAlign="center">
-              Sign in with
-            </Typography>
-          </Box>
-          <Box m="20px 0" textAlign="center">
-            <Link to="/recover-password">Forgot your password?</Link>
           </Box>
           <Box mb="100px">
           <Typography as="span" textAlign="center">
-            Don't have an account? <Link to="/register">Sign Up</Link>
+          Back to <Link to="/">Log In</Link>
           </Typography>
           </Box>
           <Box mb="20px">
@@ -103,4 +81,4 @@ class SignIn extends React.PureComponent {
     );
   }
 }
-export default withRouter(SignIn);
+export default RecoverPassword;
