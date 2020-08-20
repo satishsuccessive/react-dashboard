@@ -6,6 +6,9 @@ import { HeaderWrapper } from "./modules/header";
 import { Dashboard } from "./modules/dashboard";
 import Register from "./pages/register/Register";
 import RecoverPassword from "./pages/recoverPassword/RecoverPassword";
+import Error from "./pages/error/Error";
+import Logout from "./pages/logout/Logout";
+import ConfirmMail from "./pages/confirmMail/ConfirmMail";
 
 class Routes extends React.PureComponent {
   render() {
@@ -21,10 +24,19 @@ class Routes extends React.PureComponent {
           <Route exact path="/recover-password">
             <RecoverPassword />
           </Route>
+          <Route exact path="/logout">
+            <Logout />
+          </Route>
+          <Route exact path="/confirm-mail">
+            <ConfirmMail />
+          </Route>
           <PrivateRoute path="/dashboard">
             <HeaderWrapper />
             <Dashboard />
           </PrivateRoute>
+          <Route path="*">
+          <Error />
+          </Route>
         </Switch>
       </Router>
     );

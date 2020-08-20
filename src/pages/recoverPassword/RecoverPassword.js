@@ -14,6 +14,7 @@ class RecoverPassword extends React.PureComponent {
     return (
       <Box
         pt="70px"
+        className="bg-height"
         style={{
           background: "url('/images/bg-pattern.png') no-repeat center",
           backgroundSize: "cover",
@@ -23,7 +24,7 @@ class RecoverPassword extends React.PureComponent {
           <Box bgColor="#fff" p="35px 0">
             <Box p="0 35px" mb="35px">
               <Box mb="26px" textAlign="center">
-                <Image width="73px" src={SIGN_IN_LOGO} alt="signLogo" />
+              <Link to="/"><Image width="73px" src={SIGN_IN_LOGO} alt="signLogo" /></Link>
               </Box>
               <Box width="72%" m="auto">
                 <Typography as="span" color="#98a6ad" textAlign="center">
