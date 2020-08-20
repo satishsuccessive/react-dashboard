@@ -1,8 +1,7 @@
 import React from 'react'
 import { DropdownMenu } from '../../components/dropdownMenu';
 import { SearchBox, Box, Avatar, Button, Header, Icon } from '@stack-ui/components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faSearch, faBell, faCog } from '@fortawesome/free-solid-svg-icons';
+
 import { StyledHeader } from './style';
 
 
@@ -23,7 +22,8 @@ class HeaderWrapper extends React.PureComponent {
     })
   }
   handleclickEvent = (e) => {
-    e.preventDefault();
+    console.log('clicked')
+    // e.preventDefault();
     const { isClicked } = this.state;
     this.setState({
       isClicked: !isClicked,
@@ -79,30 +79,33 @@ class HeaderWrapper extends React.PureComponent {
         <Header mode="light" fixed className="xx">
           <Box display="flex" justifyContent="space-between" p="0px">
             <Box style={{ color: "#000" }} p="0px" m="0px">
-            <FontAwesomeIcon className="faIcon" icon={faBars} />
+            <Icon  icon="align-left" />
             </Box>
             <Box style={{ color: "#000" }} p="0px" m="0px" display="flex" alignItems="center">
-              <Box mr="20px" p="0px" m="0px">
-                <SearchBox className="searchBox.................." bg="#f1f5f7" borderRadius="30px 0 0 30px" size="md" placeholder="Search... ">
+              <Box mr="20px" p="0px" m="0px" className="search">
+                <SearchBox className="searchBox" bg="#f1f5f7" borderRadius="30px 0 0 30px" size="sm" placeholder="Search... ">
                   <Button borderRadius="0 30px 30px 0" size="md" btnType="#f1f5f7" btnVariant="contained" icon="search" color="#6c757d">
-                  <Icon size="25" icon="notification" />
+                  <Icon size="12" icon="search" />
                   </Button>
                 </SearchBox>
               </Box>
               <Box mr="20px" p="0px" m="0px">
-                <FontAwesomeIcon className="faIcon" icon={faBell} />
+               <Icon size="20" icon="notifications"/>
               </Box>
-              <Box mr="20px" p="0px" m="0px" display="flex">
+              <Box mr="18px" p="0px" m="0px" display="flex">
+                <Box mr="10px" className="avtar">
                 <Avatar size="sm" src="https://coderthemes.com/upvex/layouts/light/assets/images/users/user-1.jpg" alt="smallAvatar" />
+                </Box>
                 <Box display="flex" alignItems="center">
                   <ul className="listing menuSetting" >
-                    <li onClick={(e) => this.handleclickEvent(e)}><a href="#">Marcia J &#11167;
+                    <li onClick={(e) => this.handleclickEvent(e)}><a href="#">Marcia J 
+                    <Icon icon="chevron-down"/>
                     </a></li>
                   </ul>
                 </Box>
               </Box>
               <Box p="0px" m="0px">
-              <Icon size="25" icon="cog" />
+              <Icon size="18" icon="cog" />
               </Box>
             </Box>
           </Box>

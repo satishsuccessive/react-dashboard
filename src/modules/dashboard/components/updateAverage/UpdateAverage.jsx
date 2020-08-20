@@ -13,7 +13,7 @@ class UpdateAverage extends React.PureComponent {
               <Card>
                 <Box display="flex" justifyContent="space-between" alignItems="center" mb="15px">
                 <Typography as="paragraph" isBold>{items.title}</Typography>
-                <Icon size="16" icon="layout-linear"></Icon>
+                <Icon size="16" icon="more"></Icon>
                 </Box>
                 <Box display="flex" justifyContent="space-between">
                   <RadialProgressBar
