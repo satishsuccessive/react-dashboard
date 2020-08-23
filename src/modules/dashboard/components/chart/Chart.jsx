@@ -1,5 +1,5 @@
 import React from 'react';
-import { StackChart, Col, Box, Card } from '@stack-ui/components';
+import { StackChart, Box, Card, Table } from '@stack-ui/components';
 
 class Chart extends React.PureComponent {
   render() {
@@ -7,6 +7,7 @@ class Chart extends React.PureComponent {
     const name = 'Sales Analytics';
     const categories = ['1jan', '1feb', '1march', '1apr', '1may', '1june', '1july', '1aug'];
     return (
+      <>
         <Box display="flex" justifyContent="space-between" p="10px">
           <Box mr="20px" width="50%">
           <Card cardTitle="Sales Analytics">
@@ -41,6 +42,64 @@ class Chart extends React.PureComponent {
               }]} />
           </Box></Card></Box>
         </Box>
+        <Box display="flex" justifyContent="space-between" p='10px'>
+          <Box width="50%">
+          <StackChart type="donut" width={400} height={320} options={{
+  chart: {
+    id: 'apexchart-example'
+  },
+  xaxis: {
+    categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998]
+  }
+}} series={[44, 55, 13, 33]} />
+          </Box>
+          <Box width={'50%'}>
+          <Table striped bordered hover responsive >
+    <thead>
+        <tr>
+        <th>#</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Username</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td>1</td>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+        </tr>
+        
+        <tr>
+        <td>2</td>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+        </tr>
+        <tr>
+        <td>3</td>
+        <td colSpan="2">Larry the Bird</td>
+        <td>@twitter</td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+        <td>2</td>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+        </tr>
+        <tr>
+        <td>3</td>
+        <td colSpan="2">Larry the Bird</td>
+        <td>@twitter</td>
+        </tr>
+    </tbody>
+</Table>
+          </Box>
+        </Box>
+</>
     )
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { DropdownMenu } from '../../components/dropdownMenu';
-import { SearchBox, Box, Avatar, Button, Header, Icon } from '@stack-ui/components';
+import { SearchBox, Box, Avatar, Button, Header, Icon , DropDown} from '@stack-ui/components';
 
 import { StyledHeader } from './style';
 
@@ -29,7 +29,34 @@ class HeaderWrapper extends React.PureComponent {
       isClicked: !isClicked,
     })
   }
-  option = [
+
+  accountoptions = [
+    {
+      item: 'Welcome !',
+    },
+    {
+      icon: "person",
+      item: 'My account',
+      link: "",
+    },
+    {
+      icon: "cog",
+      item: 'Setting',
+      link: "",
+
+    },
+    {
+      icon: "lock",
+      item: 'Lock screen',
+
+    },
+    {
+      icon: "log-out",
+      item: 'Logout',
+
+    },
+  ]
+  reportOption = [
     {
       item: 'Finance Report',
       link: "",
@@ -37,49 +64,34 @@ class HeaderWrapper extends React.PureComponent {
     {
       item: 'Monthly Report',
       link: "",
+
     },
     {
-      item: 'Revenue Report',
+      item: ' Revenue Report',
+
     },
     {
       item: 'Settings',
-    },
-    {
-      item: 'Help  & Support',
-    },
-  ]
-  accountoptions = [
-    {
-      icon: "",
-      item: 'My account',
-      link: "",
-    },
-    {
-      icon: "",
-      item: 'Setting',
-      link: "",
 
     },
     {
-      icon: "",
-      item: 'Lock screen',
-
-    },
-    {
-      icon: "",
-      item: 'Logout',
+      item: 'Help & Support',
 
     },
   ]
+ 
 
   render() {
-    const { isVisible, isClicked } = this.state;
     return (
       <StyledHeader>
         <Header mode="light" fixed className="xx">
           <Box display="flex" justifyContent="space-between" p="0px">
-            <Box style={{ color: "#000" }} p="0px" m="0px">
-            <Icon  icon="align-left" />
+            <Box display="flex" alignItems="center" style={{ color: "#000" }} p="0px" ml="250px">
+            <Icon  style={{cursor:'pointer'}} icon="align-left" />
+            <Box display="flex" alignItems="center">
+                <DropDown btnType="default"  Iconsize="sm"
+                options={this.reportOption}/>
+                </Box>
             </Box>
             <Box style={{ color: "#000" }} p="0px" m="0px" display="flex" alignItems="center">
               <Box mr="20px" p="0px" m="0px" className="search">
@@ -92,16 +104,13 @@ class HeaderWrapper extends React.PureComponent {
               <Box mr="20px" p="0px" m="0px">
                <Icon size="20" icon="notifications"/>
               </Box>
-              <Box mr="18px" p="0px" m="0px" display="flex">
-                <Box mr="10px" className="avtar">
+              <Box mr="5px" p="0px" m="0px" display="flex" alignItems="center">
+                <Box className="avtar">
                 <Avatar size="sm" src="https://coderthemes.com/upvex/layouts/light/assets/images/users/user-1.jpg" alt="smallAvatar" />
                 </Box>
-                <Box display="flex" alignItems="center">
-                  <ul className="listing menuSetting" >
-                    <li onClick={(e) => this.handleclickEvent(e)}><a href="#">Marcia J 
-                    <Icon icon="chevron-down"/>
-                    </a></li>
-                  </ul>
+                <Box className="dropBox" display="flex" alignItems="center">
+                <DropDown btnType="default"  Iconsize="sm"
+                 options={this.accountoptions}/>
                 </Box>
               </Box>
               <Box p="0px" m="0px">
