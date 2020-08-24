@@ -34,7 +34,7 @@ export const StyledHeader = styled.div`{
         padding: 9px 15px;
     }
     .dropBox .dropdown .dropdown-menu.show{
-        left: 38px !important;
+        left: -10px !important;
     }
     .dropBox .dropdown .dropdown-item:last-child{
     border-top:1px solid;

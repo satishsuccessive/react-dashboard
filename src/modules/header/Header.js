@@ -89,7 +89,7 @@ class HeaderWrapper extends React.PureComponent {
             <Box display="flex" alignItems="center" style={{ color: "#000" }} p="0px" ml="250px">
             <Icon  style={{cursor:'pointer'}} icon="align-left" />
             <Box display="flex" alignItems="center">
-                <DropDown btnType="default"  Iconsize="sm"
+                <DropDown value="Report" icon="chevron-down" btnType="default"  Iconsize="sm"
                 options={this.reportOption}/>
                 </Box>
             </Box>
@@ -109,7 +109,7 @@ class HeaderWrapper extends React.PureComponent {
                 <Avatar size="sm" src="https://coderthemes.com/upvex/layouts/light/assets/images/users/user-1.jpg" alt="smallAvatar" />
                 </Box>
                 <Box className="dropBox" display="flex" alignItems="center">
-                <DropDown btnType="default"  Iconsize="sm"
+                <DropDown value="Marcia J." icon="chevron-down" btnType="default"  Iconsize="sm"
                  options={this.accountoptions}/>
                 </Box>
               </Box>
