@@ -33,15 +33,18 @@ export const StyledHeader = styled.div`{
     .search button {
         padding: 9px 15px;
     }
-    .listing{
-        list-style-type:none;
-        margin-bottom:0;
-        li{
-            a{
-            text-decoration: none;
-            color: #7c7a7a;
-            font-size:15px;
-            }
-        }
+    .dropBox .dropdown .dropdown-menu.show{
+        left: -10px !important;
     }
+    .dropBox .dropdown .dropdown-item:last-child{
+    border-top:1px solid;
+    margin-top:10px;
+    }
+    .dropBox .dropdown .dropdown-item:first-child{
+        background-color: #414d5f;
+        padding: 15px 20px;
+        margin-top: -.25rem;
+        font-size: 0.9rem !important;
+        color:#ffffff !important;
+        }
  }`;
