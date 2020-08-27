@@ -43,7 +43,7 @@ class Register extends React.PureComponent {
                 color="#414d5f"
                 isBold
                 type="subHeading"
-                as="h4"
+                as="h5"
               >
               CREATE ACCOUNT
               </Typography>
@@ -80,7 +80,7 @@ class Register extends React.PureComponent {
                 Sign Up
               </Button>
             </Box>
-            <Typography as="span" textAlign="center">
+            <Typography as="span" color="#98a6ad" textAlign="center">
               Sign in with
             </Typography>
           </Box>
@@ -88,12 +88,12 @@ class Register extends React.PureComponent {
             <Link to="/recover-password">Sign up using</Link>
           </Box>
           <Box mb="100px">
-          <Typography as="span" textAlign="center">
+          <Typography as="span" color="#98a6ad" textAlign="center">
           Already have account? <Link to="/">Sign In</Link>
           </Typography>
           </Box>
           <Box mb="20px">
-          <Typography as="span" textAlign="center">
+          <Typography as="span" color="#98a6ad" textAlign="center">
           2019 © Upvex theme by <Link to="/">Coderthemes</Link>
           </Typography>
           </Box>
