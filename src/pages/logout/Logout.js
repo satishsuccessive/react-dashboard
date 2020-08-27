@@ -42,12 +42,12 @@ class Logout extends React.PureComponent {
 
           </Box>
           <Box mb="100px">
-          <Typography as="span" textAlign="center">
+          <Typography as="span" color="#98a6ad" textAlign="center">
           Back to <Link to="/">Log In</Link>
           </Typography>
           </Box>
           <Box mb="20px">
-          <Typography as="span" textAlign="center">
+          <Typography as="span" color="#98a6ad" textAlign="center">
           2019 © Upvex theme by <Link to="/">Coderthemes</Link>
           </Typography>
           </Box>

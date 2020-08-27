@@ -9,6 +9,7 @@ import RecoverPassword from "./pages/recoverPassword/RecoverPassword";
 import Error from "./pages/error/Error";
 import Logout from "./pages/logout/Logout";
 import ConfirmMail from "./pages/confirmMail/ConfirmMail";
+import GeneralUi from "./modules/dashboard/components/generalUi/GeneralUi";
 
 class Routes extends React.PureComponent {
   render() {
@@ -32,8 +33,12 @@ class Routes extends React.PureComponent {
           </Route>
           <PrivateRoute path="/dashboard">
             <HeaderWrapper />
-            <Dashboard />
+            <Dashboard isGeneralUi={false} />
           </PrivateRoute>
+          <Route exact path="/general-ui" >
+          <HeaderWrapper />
+          <Dashboard isGeneralUi />
+          </Route>
           <Route path="*">
           <Error />
           </Route>
