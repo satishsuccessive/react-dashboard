@@ -1,33 +1,13 @@
 import React from 'react'
-import { DropdownMenu } from '../../components/dropdownMenu';
 import { SearchBox, Box, Avatar, Button, Header, Icon , DropDown} from '@stack-ui/components';
-
+import { Link } from 'react-router-dom';
 import { StyledHeader } from './style';
 
 
 class HeaderWrapper extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.state = {
-      isVisible: false,
-      isClicked: false,
-    };
-  }
-
-  handleClick = (e) => {
-    e.preventDefault();
-    const { isVisible } = this.state;
-    this.setState({
-      isVisible: !isVisible,
-    })
-  }
-  handleclickEvent = (e) => {
-    console.log('clicked')
-    // e.preventDefault();
-    const { isClicked } = this.state;
-    this.setState({
-      isClicked: !isClicked,
-    })
+    this.state = {};
   }
 
   accountoptions = [
@@ -82,12 +62,16 @@ class HeaderWrapper extends React.PureComponent {
  
 
   render() {
+     const { handleToggleEvent } = this.props
+     console.log(this.props, 'hhehehehehhe')
     return (
       <StyledHeader>
         <Header mode="light" fixed className="xx">
           <Box display="flex" justifyContent="space-between" p="0px">
             <Box display="flex" alignItems="center" style={{ color: "#000" }} p="0px" ml="250px">
+              <Link onClick={this.handleToggleEvent}>
             <Icon  style={{cursor:'pointer'}} icon="align-left" />
+            </Link>
             <Box display="flex" alignItems="center">
                 <DropDown value="Report" icon="chevron-down" btnType="default"  Iconsize="sm"
                 options={this.reportOption}/>
