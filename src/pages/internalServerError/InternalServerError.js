@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  InputGroup,
   Button,
   Box,
   Typography,
@@ -10,7 +9,7 @@ import {
 import { SIGN_IN_LOGO } from "../../utils/constant";
 import { Link } from "react-router-dom";
 
-class Logout extends React.PureComponent {
+class InternalServerError extends React.PureComponent {
   render() {
     return (
       <Box
@@ -32,19 +31,32 @@ class Logout extends React.PureComponent {
               </Box>
               <Box  m="12px">
               <Typography as="h2" textAlign="center">
-              See you again !
+              Internal Server Error
                 </Typography>
               </Box>
+              <Box mb="40px">
               <Typography as="span" color="#98a6ad" textAlign="center">
-                You are now successfully sign out.
+              Why not try refreshing your page? or you can contact
                 </Typography>
+                <Link to="/support">
+                <Typography as="span" isBold color="#98a6ad" textAlign="center">
+                Support
+                </Typography>
+                </Link>
+                </Box>
+                <Link to="/">
+                <Button
+                size="lg"
+                btnType="danger"
+                btnVariant="contained"
+                block="true"
+                onClick={console.log('confirm email')}
+              >
+                Back to Home
+              </Button>
+              </Link>
             </Box>
 
-          </Box>
-          <Box mb="100px">
-          <Typography as="span" color="#98a6ad" textAlign="center">
-          Back to <Link to="/">Log In</Link>
-          </Typography>
           </Box>
           <Box mb="20px">
           <Typography as="span" color="#98a6ad" textAlign="center">
@@ -56,4 +68,4 @@ class Logout extends React.PureComponent {
     );
   }
 }
-export default Logout;
+export default InternalServerError;

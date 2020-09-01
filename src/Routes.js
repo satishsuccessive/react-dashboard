@@ -9,6 +9,8 @@ import Error from "./pages/error/Error";
 import { HeaderWrapper } from './modules/header';
 import Logout from "./pages/logout/Logout";
 import ConfirmMail from "./pages/confirmMail/ConfirmMail";
+import GeneralUi from "./modules/dashboard/components/generalUi/GeneralUi";
+import InternalServerError from "./pages/internalServerError/InternalServerError";
 
 class Routes extends React.PureComponent {
   render() {
@@ -30,10 +32,17 @@ class Routes extends React.PureComponent {
           <Route exact path="/confirm-mail">
             <ConfirmMail />
           </Route>
-          <PrivateRoute path="/dashboard">
+          <Route exact path="/internal500">
+            <InternalServerError />
+          </Route>
+          {/* <PrivateRoute path="/dashboard">
             <HeaderWrapper />
-            <Dashboard />
-          </PrivateRoute>
+            <Dashboard isGeneralUi={false} />
+          </PrivateRoute> */}
+          <Route exact path="/general-ui" >
+          <HeaderWrapper />
+          <Dashboard isGeneralUi />
+          </Route>
           <Route path="*">
           <Error />
           </Route>
