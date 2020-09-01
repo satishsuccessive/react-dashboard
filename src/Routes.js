@@ -10,6 +10,7 @@ import Error from "./pages/error/Error";
 import Logout from "./pages/logout/Logout";
 import ConfirmMail from "./pages/confirmMail/ConfirmMail";
 import GeneralUi from "./modules/dashboard/components/generalUi/GeneralUi";
+import InternalServerError from "./pages/internalServerError/InternalServerError";
 
 class Routes extends React.PureComponent {
   render() {
@@ -30,6 +31,9 @@ class Routes extends React.PureComponent {
           </Route>
           <Route exact path="/confirm-mail">
             <ConfirmMail />
+          </Route>
+          <Route exact path="/internal500">
+            <InternalServerError />
           </Route>
           <PrivateRoute path="/dashboard">
             <HeaderWrapper />
