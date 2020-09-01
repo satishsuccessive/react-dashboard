@@ -20,7 +20,8 @@ class SidebarComponent extends React.PureComponent {
   })}
 
   render() {
-   
+  //  const { sidebarToggle } = this.props;
+  //  console.log('sidebarTogglesidebarToggle',this.props);
     return (
       <StyledSidebar>
       <Sidebar background="#3d454e" style={{width:"240px", padding:"0"}} >

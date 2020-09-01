@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box } from '@stack-ui/components'
 import { Sidebar, Chart, TopHeader, UpdateAverage } from './components';
-import { HeaderWrapper } from "../../modules/header";
+import  {HeaderWrapper}  from "../../modules/header";
 
 import GeneralUi from './components/generalUi/GeneralUi';
 
@@ -13,7 +13,7 @@ class Dashboard extends React.PureComponent {
     };
   }
   handleToggleEvent = (e) => {
-    alert('clicked')
+    // alert('clicked')
     // e.preventDefault();
     const { sidebarToggle } = this.state;
     this.setState({
@@ -23,14 +23,17 @@ class Dashboard extends React.PureComponent {
 
   render() {
     const { isGeneralUi } = this.props;
-    console.log(this.props,'{{{{{{{{{')
+    const { sidebarToggle } = this.state
+    console.log('sidebarToggle', this.state)
     return (
       <>
-      <HeaderWrapper />
-      <Box ml="18%" p="20px" background="#f5f6f8">
+       <HeaderWrapper 
+       handleToggleEvent={this.handleToggleEvent}
+       />
+      <Box ml="16%" p="20px" background="#f5f6f8">
         <TopHeader isGeneralUi={isGeneralUi} />
         {isGeneralUi ? (<GeneralUi />) : (<><UpdateAverage /><Chart /></>)}
-        <Sidebar />
+        <Sidebar className= {`${sidebarToggle ? "removeWidth" : "fullwidth"}`} />
       </Box>
       </>
     )

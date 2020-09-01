@@ -40,7 +40,6 @@ class Routes extends React.PureComponent {
             <Dashboard isGeneralUi={false} />
           </PrivateRoute> */}
           <Route exact path="/general-ui" >
-          <HeaderWrapper />
           <Dashboard isGeneralUi />
           </Route>
           <Route path="*">

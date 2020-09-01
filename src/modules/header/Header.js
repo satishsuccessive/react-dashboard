@@ -62,16 +62,14 @@ class HeaderWrapper extends React.PureComponent {
  
 
   render() {
-     const { handleToggleEvent } = this.props
-     console.log(this.props, 'hhehehehehhe')
+    const { handleToggleEvent } = this.props;
+    console.log('this.propss', this.props)
     return (
       <StyledHeader>
         <Header mode="light" fixed className="xx">
           <Box display="flex" justifyContent="space-between" p="0px">
             <Box display="flex" alignItems="center" style={{ color: "#000" }} p="0px" ml="250px">
-              <Link onClick={this.handleToggleEvent}>
-            <Icon  style={{cursor:'pointer'}} icon="align-left" />
-            </Link>
+            <Icon  onClick={handleToggleEvent} style={{cursor:'pointer'}} icon="align-left" />
             <Box display="flex" alignItems="center">
                 <DropDown value="Report" icon="chevron-down" btnType="default"  Iconsize="sm"
                 options={this.reportOption}/>
@@ -80,9 +78,9 @@ class HeaderWrapper extends React.PureComponent {
             <Box style={{ color: "#000" }} p="0px" m="0px" display="flex" alignItems="center">
               <Box mr="20px" p="0px" m="0px" className="search">
                 <SearchBox className="searchBox" bg="#f1f5f7" borderRadius="30px 0 0 30px" size="sm" placeholder="Search... ">
-                  <Button borderRadius="0 30px 30px 0" size="md" btnType="#f1f5f7" btnVariant="contained" icon="search" color="#6c757d">
-                  <Icon size="12" icon="search" />
-                  </Button>
+                  {/* <Button borderRadius="0 30px 30px 0"  icon="search" color="#6c757d"> */}
+                  {/* <Icon size="12" icon="search" /> */}
+                  {/* </Button> */}
                 </SearchBox>
               </Box>
               <Box mr="20px" p="0px" m="0px">

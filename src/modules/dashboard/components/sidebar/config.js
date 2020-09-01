@@ -13,7 +13,7 @@ export const sidebarNav = [
           navIcon: "dropDown1.svg",
         },
         {
-          navText: "Dashboards 1",
+          navText: "Dashboards 2",
           navIcon: "dropDown1.svg",
         },
       ],
@@ -37,10 +37,6 @@ export const sidebarNav = [
         iconLeft: "document",
         iconRight:"chevron-right",
         dropDown: [
-            {
-              navText: "Starter",
-              navIcon: "dropDown1.svg",
-            },
             {
               navText: "Log In",
               navLink: "/",
@@ -72,11 +68,6 @@ export const sidebarNav = [
               },
               {
                 navText: "Error 404",
-                navLink: "/dropDown1",
-                navIcon: "dropDown1.svg",
-              },
-              {
-                navText: "Error 404-alt",
                 navLink: "/dropDown1",
                 navIcon: "dropDown1.svg",
               },
