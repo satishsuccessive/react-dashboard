@@ -73,7 +73,7 @@ export const sidebarNav = [
               },
               {
                 navText: "Error 505",
-                navLink: "/dropDown1",
+                navLink: "/internal500",
                 navIcon: "dropDown1.svg",
               },
           ],

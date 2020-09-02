@@ -1,8 +1,7 @@
 import React from 'react';
 import { Box } from '@stack-ui/components'
-import { Sidebar, Chart, TopHeader, UpdateAverage } from './components';
+import { Sidebar, Chart, TopHeader, UpdateAverage, RightSidebar } from './components';
 import  {HeaderWrapper}  from "../../modules/header";
-
 import GeneralUi from './components/generalUi/GeneralUi';
 
 class Dashboard extends React.PureComponent {
@@ -10,30 +9,44 @@ class Dashboard extends React.PureComponent {
     super(props);
     this.state = {
       sidebarToggle : false,
+      enable:false,
+
     };
   }
   handleToggleEvent = (e) => {
-    // alert('clicked')
-    // e.preventDefault();
     const { sidebarToggle } = this.state;
     this.setState({
       sidebarToggle: !sidebarToggle,
     })
   }
+  handleEnabledFun = (e) => {
+    const { enable } = this.state;
+    this.setState({
+      enable: !enable,
+    })
+  }
 
   render() {
     const { isGeneralUi } = this.props;
-    const { sidebarToggle } = this.state
-    console.log('sidebarToggle', this.state)
+    const { sidebarToggle,enable } = this.state
     return (
       <>
+      <Box className= {`${enable ? "rightbar-overlay" : ""}`}></Box>
        <HeaderWrapper 
        handleToggleEvent={this.handleToggleEvent}
+       sidebarToggle={sidebarToggle}
+       handleEnabledFun={this.handleEnabledFun}
+       enable={enable}
        />
-      <Box ml="16%" p="20px" background="#f5f6f8">
+      <Box ml="16%" p="20px" background="#f5f6f8" className= {`${sidebarToggle ? "remove-width" : "add-width"}`}>
         <TopHeader isGeneralUi={isGeneralUi} />
         {isGeneralUi ? (<GeneralUi />) : (<><UpdateAverage /><Chart /></>)}
-        <Sidebar className= {`${sidebarToggle ? "removeWidth" : "fullwidth"}`} />
+        <Sidebar sidebarToggle={sidebarToggle} />
+        <RightSidebar 
+         enable={this.state.enable}
+         handleEnabledFun={this.handleEnabledFun}
+
+        />
       </Box>
       </>
     )
