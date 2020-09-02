@@ -35,10 +35,10 @@ class Routes extends React.PureComponent {
           <Route exact path="/internal500">
             <InternalServerError />
           </Route>
-          {/* <PrivateRoute path="/dashboard">
+          <PrivateRoute path="/dashboard">
             <HeaderWrapper />
             <Dashboard isGeneralUi={false} />
-          </PrivateRoute> */}
+          </PrivateRoute>
           <Route exact path="/general-ui" >
           <Dashboard isGeneralUi />
           </Route>

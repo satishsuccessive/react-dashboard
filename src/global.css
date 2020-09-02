@@ -96,3 +96,28 @@ p{
 .header-settings h3{
     font-size: 20px !important;
 }
+.remove-width{
+    margin-left: 5% !important; 
+}
+.removeClass{
+    left: -100% !important;
+    transition: 1s;
+} 
+ .addClass {
+    transition: 1s;
+    left: 0;
+}
+.rightbar-overlay{
+    background-color: rgba(65,77,95,.55);
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1500px;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    display: block !important;
+    z-index: 9;
+    -webkit-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}

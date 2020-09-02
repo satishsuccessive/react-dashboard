@@ -20,11 +20,10 @@ class SidebarComponent extends React.PureComponent {
   })}
 
   render() {
-  //  const { sidebarToggle } = this.props;
-  //  console.log('sidebarTogglesidebarToggle',this.props);
+   const { sidebarToggle } = this.props;
     return (
       <StyledSidebar>
-      <Sidebar background="#3d454e" style={{width:"240px", padding:"0"}} >
+      <Sidebar background="#3d454e" style={{width:"240px", padding:"0"}} className= {`${sidebarToggle ? "removeWidth" : "fullwidth"}`}>
         <Box mt="40px">
         <Box mb="26px" style={{textAlign: "center"}}>
         <Image width= "80px" src={SIDEBAR_LOGO} alt="sidebarLogo" />
@@ -36,12 +35,12 @@ class SidebarComponent extends React.PureComponent {
           {item.dropDown ? 
           <Box className="menubtn" onClick= {()=> this.handleToggleFun(item.sidebarText)}> 
           {item.dropDown && <Icon style={{margin:"0 10px"}} size="16" color="#8391a0" icon={item.iconLeft} />}
-          {item.sidebarText}
+          <span className="textwrap">{item.sidebarText}</span>
           {item.dropDown && <Icon className="rightIcon" style={{position:'absolute', right:"10%"}} size="16" color="#8391a0" icon={item.iconRight} />}
           </Box>:
              <Link className="menubtn" to ={item.sidebarLink}>
              <Icon style={{margin:"0 10px"}} size="16" color="#8391a0" icon={item.iconLeft} />
-               {item.sidebarText}
+             <span className="textwrap">{item.sidebarText}</span>
                {item.dropDown && <Icon className="rightIcon" style={{margin:"0 10px"}} size="16" color="#8391a0" icon={item.iconRight} />}
           </Link> }
              </Box>
@@ -49,7 +48,9 @@ class SidebarComponent extends React.PureComponent {
              <Box>
              {item.dropDown.map((dropdrownItem,index) => {
                  return <Box key={index} >
-                     <Link className="menubtn" style={{padding:"8px 55px 10px"}} to={dropdrownItem.navLink}>{dropdrownItem.navText}</Link>
+                     <Link className="menubtn" style={{padding:"8px 55px 10px"}} to={dropdrownItem.navLink}>
+                     <span className="textwrap">{dropdrownItem.navText}</span>
+                     </Link>
                  </Box>
              })}
              </Box>

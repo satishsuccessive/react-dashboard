@@ -7,8 +7,11 @@ import { StyledHeader } from './style';
 class HeaderWrapper extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+     
+    };
   }
+
 
   accountoptions = [
     {
@@ -62,13 +65,13 @@ class HeaderWrapper extends React.PureComponent {
  
 
   render() {
-    const { handleToggleEvent } = this.props;
-    console.log('this.propss', this.props)
+    const { handleToggleEvent, handleEnabledFun, sidebarToggle} = this.props;
+    
     return (
       <StyledHeader>
         <Header mode="light" fixed className="xx">
           <Box display="flex" justifyContent="space-between" p="0px">
-            <Box display="flex" alignItems="center" style={{ color: "#000" }} p="0px" ml="250px">
+            <Box display="flex" alignItems="center" style={{ color: "#000" }} p="0px" ml="250px" className= {`${sidebarToggle ? "remove" : "add"}`}>
             <Icon  onClick={handleToggleEvent} style={{cursor:'pointer'}} icon="align-left" />
             <Box display="flex" alignItems="center">
                 <DropDown value="Report" icon="chevron-down" btnType="default"  Iconsize="sm"
@@ -86,17 +89,17 @@ class HeaderWrapper extends React.PureComponent {
               <Box mr="20px" p="0px" m="0px">
                <Icon size="20" icon="notifications"/>
               </Box>
-              <Box mr="5px" p="0px" m="0px" display="flex" alignItems="center">
+              <Box p="0px" m="0px" display="flex" alignItems="center">
                 <Box className="avtar">
                 <Avatar size="sm" src="https://coderthemes.com/upvex/layouts/light/assets/images/users/user-1.jpg" alt="smallAvatar" />
                 </Box>
-                <Box className="dropBox" display="flex" alignItems="center">
-                <DropDown value="Marcia J." icon="chevron-down" btnType="default"  Iconsize="sm"
+                <Box className="dropBox" p="0" display="flex" alignItems="center">
+                <DropDown style={{padding:'0'}} value="Marcia J." icon="chevron-down" btnType="default"  Iconsize="sm"
                  options={this.accountoptions}/>
                 </Box>
               </Box>
               <Box p="0px" m="0px">
-              <Icon size="18" icon="cog" />
+              <Icon onClick = {handleEnabledFun} style={{cursor:'pointer'}}   size="18" icon="cog" />
               </Box>
             </Box>
           </Box>
