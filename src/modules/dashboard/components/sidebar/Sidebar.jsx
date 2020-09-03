@@ -20,7 +20,7 @@ class SidebarComponent extends React.PureComponent {
   })}
 
   render() {
-   const { sidebarToggle } = this.props;
+   const { sidebarToggle, handleToggleEvent } = this.props;
     return (
       <StyledSidebar>
       <Sidebar background="#3d454e" style={{width:"240px", padding:"0"}} className= {`${sidebarToggle ? "removeWidth" : "fullwidth"}`}>
@@ -34,12 +34,12 @@ class SidebarComponent extends React.PureComponent {
           <Box display="flex" style={{cursor:"pointer"}} className= {`${this.state.active[item.sidebarText] ? "active" : "disabled"}`} alignItems="center" pt="13px" pb="13px" pl="20px" pr="20px"> 
           {item.dropDown ? 
           <Box className="menubtn" onClick= {()=> this.handleToggleFun(item.sidebarText)}> 
-          {item.dropDown && <Icon style={{margin:"0 10px"}} size="16" color="#8391a0" icon={item.iconLeft} />}
+          {item.dropDown && <Icon onClick={handleToggleEvent} style={{margin:"0 10px"}} size="16" color="#8391a0" icon={item.iconLeft} />}
           <span className="textwrap">{item.sidebarText}</span>
           {item.dropDown && <Icon className="rightIcon" style={{position:'absolute', right:"10%"}} size="16" color="#8391a0" icon={item.iconRight} />}
           </Box>:
              <Link className="menubtn" to ={item.sidebarLink}>
-             <Icon style={{margin:"0 10px"}} size="16" color="#8391a0" icon={item.iconLeft} />
+             <Icon onClick={handleToggleEvent} style={{margin:"0 10px"}} size="16" color="#8391a0" icon={item.iconLeft} />
              <span className="textwrap">{item.sidebarText}</span>
                {item.dropDown && <Icon className="rightIcon" style={{margin:"0 10px"}} size="16" color="#8391a0" icon={item.iconRight} />}
           </Link> }

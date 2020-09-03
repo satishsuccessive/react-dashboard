@@ -41,7 +41,9 @@ class Dashboard extends React.PureComponent {
       <Box ml="16%" p="20px" background="#f5f6f8" className= {`${sidebarToggle ? "remove-width" : "add-width"}`}>
         <TopHeader isGeneralUi={isGeneralUi} />
         {isGeneralUi ? (<GeneralUi />) : (<><UpdateAverage /><Chart /></>)}
-        <Sidebar sidebarToggle={sidebarToggle} />
+        <Sidebar sidebarToggle={sidebarToggle}
+        handleToggleEvent={this.handleToggleEvent}
+        />
         <RightSidebar 
          enable={this.state.enable}
          handleEnabledFun={this.handleEnabledFun}
