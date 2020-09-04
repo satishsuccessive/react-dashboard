@@ -3,6 +3,7 @@ import { Box } from '@stack-ui/components'
 import { Sidebar, Chart, TopHeader, UpdateAverage, RightSidebar } from './components';
 import  {HeaderWrapper}  from "../../modules/header";
 import GeneralUi from './components/generalUi/GeneralUi';
+import EarningReports from './components/earningReports/EarningReports';
 
 class Dashboard extends React.PureComponent {
   constructor(props) {
@@ -40,7 +41,7 @@ class Dashboard extends React.PureComponent {
        />
       <Box ml="16%" p="20px" background="#f5f6f8" className= {`${sidebarToggle ? "remove-width" : "add-width"}`}>
         <TopHeader isGeneralUi={isGeneralUi} />
-        {isGeneralUi ? (<GeneralUi />) : (<><UpdateAverage /><Chart /></>)}
+        {isGeneralUi ? (<GeneralUi />) : (<><UpdateAverage /><Chart /><EarningReports /></>)}
         <Sidebar sidebarToggle={sidebarToggle}
         handleToggleEvent={this.handleToggleEvent}
         />
