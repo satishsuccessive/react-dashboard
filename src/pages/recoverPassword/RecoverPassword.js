@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  InputGroup,
+  StackInputGroup,
   Button,
   Box,
   Typography,
@@ -50,7 +50,7 @@ class RecoverPassword extends React.PureComponent {
             </Box>
             <Box p="35px 35px">
               <Box mb="25px">
-                <InputGroup
+                <StackInputGroup
                   labelText="Email address"
                   type="email"
                   placeholder="Enter your email"

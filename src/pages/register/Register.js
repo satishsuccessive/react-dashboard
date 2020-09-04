@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  InputGroup,
+  StackInputGroup,
   Button,
   Box,
   Typography,
@@ -50,21 +50,21 @@ class Register extends React.PureComponent {
             </Box>
             <Box p="35px 35px">
             <Box mb="25px">
-            <InputGroup
+            <StackInputGroup
               labelText="Full Name"
               type="text"
               placeholder="Enter your name"
             />
           </Box>
               <Box mb="25px">
-                <InputGroup
+                <StackInputGroup
                   labelText="Email address"
                   type="email"
                   placeholder="Enter your email"
                 />
               </Box>
               <Box mb="25px">
-                <InputGroup
+                <StackInputGroup
                   labelText="Password"
                   type="password"
                   placeholder="Enter your password"

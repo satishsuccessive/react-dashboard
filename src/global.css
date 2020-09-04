@@ -74,6 +74,10 @@ a {
     font-weight: 400 !important;
     color: #98a6ad !important
 }
+i{
+    font-style: normal;
+    color: #5089de!important;
+}
 .bg-height{
     height: 100vh;
 }
@@ -93,6 +97,6 @@ p{
     font-size: 15px !important;
     font-weight: 500 !important;
 }
-.header-settings h3{
+.header-settings h3, .earning-header h3{
     font-size: 20px !important;
 }

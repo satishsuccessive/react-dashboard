@@ -96,9 +96,7 @@ class HeaderWrapper extends React.PureComponent {
             <Box style={{ color: "#000" }} p="0px" m="0px" display="flex" alignItems="center">
               <Box mr="20px" p="0px" m="0px" className="search">
                 <SearchBox className="searchBox" bg="#f1f5f7" borderRadius="30px 0 0 30px" size="sm" placeholder="Search... ">
-                  <Button borderRadius="0 30px 30px 0" size="md" btnType="#f1f5f7" btnVariant="contained" icon="search" color="#6c757d">
-                  <Icon size="12" icon="search" />
-                  </Button>
+                  
                 </SearchBox>
               </Box>
               <Box mr="20px" p="0px" m="0px">
