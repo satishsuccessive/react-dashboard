@@ -43,7 +43,9 @@ class Chart extends React.PureComponent {
           </Box></Card></Box>
         </Box>
         <Box display="flex" justifyContent="space-between" p='10px'>
-          <Box width="50%">
+        <Box mr="20px" width="50%">
+          <Card cardTitle="Donut and Radar Chart">
+          <Box p="20px">
           <StackChart type="donut" width={400} height={320} options={{
   chart: {
     id: 'apexchart-example'
@@ -52,8 +54,13 @@ class Chart extends React.PureComponent {
     categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998]
   }
 }} series={[44, 55, 13, 33]} />
+
           </Box>
-          <Box width={'50%'}>
+          </Card>
+          </Box>
+          <Box width="50%">
+          <Card cardTitle="Simple Table">
+          <Box p="20px">
           <Table striped bordered hover responsive >
     <thead>
         <tr>
@@ -85,18 +92,21 @@ class Chart extends React.PureComponent {
     </tbody>
     <tbody>
         <tr>
-        <td>2</td>
+        <td>4</td>
         <td>Jacob</td>
         <td>Thornton</td>
         <td>@fat</td>
         </tr>
         <tr>
-        <td>3</td>
-        <td colSpan="2">Larry the Bird</td>
-        <td>@twitter</td>
+        <td>5</td>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
         </tr>
     </tbody>
 </Table>
+          </Box>
+          </Card>
           </Box>
         </Box>
 </>

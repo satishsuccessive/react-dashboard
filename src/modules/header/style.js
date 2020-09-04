@@ -33,6 +33,9 @@ export const StyledHeader = styled.div`{
     .search button {
         padding: 9px 15px;
     }
+    .dropBox .dropdown{
+        padding:0 5px 0 10px!important;
+    }
     .dropBox .dropdown .dropdown-menu.show{
         left: -10px !important;
     }
@@ -46,5 +49,8 @@ export const StyledHeader = styled.div`{
         margin-top: -.25rem;
         font-size: 0.9rem !important;
         color:#ffffff !important;
+        }
+        .remove{
+            margin-left:5%;
         }
  }`;
