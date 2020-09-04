@@ -18,7 +18,7 @@ class Routes extends React.PureComponent {
       <Router>
         <Switch>
           <Route exact path="/">
-          <Dashboard />
+          <SignIn />
           </Route>
           <Route exact path="/register">
             <Register />
@@ -36,7 +36,6 @@ class Routes extends React.PureComponent {
             <InternalServerError />
           </Route>
           <PrivateRoute path="/dashboard">
-            <HeaderWrapper />
             <Dashboard isGeneralUi={false} />
           </PrivateRoute>
           <Route exact path="/general-ui" >
