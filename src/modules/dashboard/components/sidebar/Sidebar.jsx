@@ -42,6 +42,7 @@ class SidebarComponent extends React.PureComponent {
              <Icon onClick={handleToggleEvent} style={{margin:"0 10px"}} size="16" color="#8391a0" icon={item.iconLeft} />
              <span className="textwrap">{item.sidebarText}</span>
                {item.dropDown && <Icon className="rightIcon" style={{margin:"0 10px"}} size="16" color="#8391a0" icon={item.iconRight} />}
+          <Box style={{position:'absolute', right:'0px', top:'0'}}>{item.BadgeIcon}</Box>
           </Link> }
              </Box>
              {item.dropDown &&
