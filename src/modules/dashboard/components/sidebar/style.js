@@ -5,6 +5,8 @@ export const StyledSidebar = styled.div`{
   color: #98a6ad;
   text-decoration : none;
   display:block;
+  width:100%;
+  position:relative;
   }
   .menubtn:active, .menubtn:focus, .menubtn:hover {
     color: #a8bcd2 !important;
@@ -40,7 +42,7 @@ export const StyledSidebar = styled.div`{
 .textwrap{
   display:none;
 }
-.active {
+.active{
   position:relative;
 }
 .textwrap + span{

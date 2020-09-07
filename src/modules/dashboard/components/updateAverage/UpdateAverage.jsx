@@ -11,8 +11,8 @@ class UpdateAverage extends React.PureComponent {
           cardDetails.map(items => (
             <Box p="10px" width="25%" mb="10px">
               <Card>
-                <Box display="flex" justifyContent="space-between" alignItems="center" mb="15px">
-                <Typography as="paragraph" isBold>{items.title}</Typography>
+                <Box display="flex" justifyContent="space-between" alignItems="center" mb="25px">
+                <Typography as="h5" isBold>{items.title}</Typography>
                 <Icon size="16" icon="more"></Icon>
                 </Box>
                 <Box display="flex" justifyContent="space-between">
@@ -23,8 +23,8 @@ class UpdateAverage extends React.PureComponent {
                     percentage={items.percentage}
                   />
                   <Box display="flex" flexDirection="column" justifyContent="flex-end" alignItems="flex-end">
-                    <Typography as="h1" isBold>{items.count}</Typography>
-                    <span>{items.last}</span>
+                    <Typography as="h3" isBold>{items.count}</Typography>
+                    <Typography as="p">{items.last}</Typography>
                   </Box>
                 </Box>
               </Card>
