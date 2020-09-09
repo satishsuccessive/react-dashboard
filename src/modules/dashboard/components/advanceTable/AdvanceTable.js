@@ -1,7 +1,6 @@
 import React from 'react';
-import AdvanceTable from '@stack-ui/components/dist/cjs/components/AdvanceTable/AdvanceTable';
-import { TransColumns, TransData} from '../../../../lib/contsant';
-import { Box, Card } from '@stack-ui/components'
+import { TransColumns, TransData} from './contsant';
+import { Box, Card,AdvanceTable } from '@stack-ui/components'
 
 
 const advanceTable = () => {

@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { Icon, Button, Avatar, Badge} from '@stack-ui/components';
+import { Icon, Button, Avatar, Badge, Image} from '@stack-ui/components';
+
 
 export const columns = [
     {
