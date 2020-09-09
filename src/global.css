@@ -88,9 +88,9 @@ i{
     font-size: 13px !important;
     }
 p{
-    color: #98a6ad!important;
+    /* color: #98a6ad!important; */
     font-size: 0.8125rem;
-   /* color: #414d5f!important; */
+   color: #414d5f;
 }
 .general-ui-elements p{
     font-size: 13px !important;
@@ -130,4 +130,7 @@ p{
 
 .rdt_TableHeader{
     display: none !important;
+}
+.breadcrumb{
+    font-size: 13px;
 }
