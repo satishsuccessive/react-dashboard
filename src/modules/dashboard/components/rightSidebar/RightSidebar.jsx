@@ -1,5 +1,6 @@
 import React from 'react';
 import { Sidebar, Typography, Icon, Avatar, Box, Badge} from '@stack-ui/components';
+import Switch from '@stack-ui/components/dist/cjs/components/Switch/Switch';
 import { StyledSidebar } from './style';
 
 
@@ -41,12 +42,12 @@ class SidebarComponent extends React.PureComponent {
       <Sidebar background="#ffffff" position="right" style={{width:"260px", padding:"0"}} className= {`${enable ? "addClass" : "removeClass"}`}>
         <Box className="subTitle">
       <Typography as="h5" isBold>
-       Setting
+       Settings
        <Icon onClick = {handleEnabledFun} style={{cursor:'pointer'}}  size="14" icon="small-cross" />
       </Typography>
       </Box>
       <Box className="avtarStyle" display="flex" mt="20px" mb="25px" textAlign="center" justifyContent="center">
-      <Avatar title="M. Gandhi" subTitle="lorem impsum" size="sm" src="https://coderthemes.com/upvex/layouts/light/assets/images/users/user-1.jpg" alt="largeAvatar" />
+      <Avatar title="Marcia J. Melia" subTitle="Product Owner" subTitleFont="12px" size="lg" src="https://coderthemes.com/upvex/layouts/light/assets/images/users/user-1.jpg" alt="largeAvatar" isBold="600" />
       </Box>
       <Box p="20px" style={{borderTop:"1px solid #f7f7f7", borderBottom:"1px solid #f7f7f7"}} display="flex" justifyContent="space-between">
         <Box>
@@ -65,6 +66,13 @@ class SidebarComponent extends React.PureComponent {
         Balance
   </Typography>
       </Box>
+      </Box>
+      <Box p="20px" style={{borderTop:"1px solid #f7f7f7", borderBottom:"1px solid #f7f7f7"}}>
+      <Box mb="10px"><Switch label="Notifications"/></Box>
+      <Box  mb="10px"><Switch label="API Access"/></Box>
+      <Box  mb="10px"><Switch label="Auto Updates"/></Box>
+      <Box  mb="10px"><Switch label="Online Status"/></Box>
+
       </Box>
       <Box p="20px" style={{borderTop:"1px solid #f7f7f7", borderBottom:"1px solid #f7f7f7"}} display="flex" justifyContent="space-between">
         <Box>
@@ -88,7 +96,7 @@ class SidebarComponent extends React.PureComponent {
   <Typography as="h5" color="#000000">
   {item.title}
   </Typography>
-  <Typography as="p">
+  <Typography as="p" size="14px">
  {item.paragraph}
   </Typography>
 </Box>
