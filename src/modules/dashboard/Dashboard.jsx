@@ -4,6 +4,7 @@ import { Sidebar, Chart, TopHeader, UpdateAverage, RightSidebar } from './compon
 import  {HeaderWrapper}  from "../../modules/header";
 import GeneralUi from './components/generalUi/GeneralUi';
 import EarningReports from './components/earningReports/EarningReports';
+import AdvanceTable from './components/advanceTable/AdvanceTable';
 
 class Dashboard extends React.PureComponent {
   constructor(props) {
@@ -41,7 +42,8 @@ class Dashboard extends React.PureComponent {
        />
       <Box ml="16%" p="20px" background="#f5f6f8" className= {`${sidebarToggle ? "remove-width" : "add-width"}`}>
         <TopHeader isGeneralUi={isGeneralUi} />
-        {isGeneralUi ? (<GeneralUi />) : (<><UpdateAverage /><Chart /><EarningReports /></>)}
+        {isGeneralUi ? (<GeneralUi />) : (<><UpdateAverage /><Chart /><Box display="flex" justifyContent="space-between" p="10px"><EarningReports /> 
+          <AdvanceTable /></Box></>)}
         <Sidebar sidebarToggle={sidebarToggle}
         handleToggleEvent={this.handleToggleEvent}
         />

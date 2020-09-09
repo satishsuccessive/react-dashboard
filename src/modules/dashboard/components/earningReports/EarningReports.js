@@ -10,7 +10,7 @@ const EarningReports = () => {
 
   const earningReportCalculation = {current: '$120,254', last: '$98,741' }
   return (
-    <Box mr="20px" p="10px" width="33.33%" className="earning-header">
+    <Box mr="20px"  width="33%" className="earning-header">
       <Card cardTitle="Earning Reports">
         <Box mb="15px">
           <Typography as="span">{earningData}</Typography>

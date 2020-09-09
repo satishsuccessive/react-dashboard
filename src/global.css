@@ -89,6 +89,7 @@ i{
     }
 p{
     color: #98a6ad!important;
+    font-size: 0.8125rem;
    /* color: #414d5f!important; */
 }
 .general-ui-elements p{
@@ -99,7 +100,7 @@ p{
     font-weight: 500 !important;
 }
 .header-settings h3, .earning-header h3{
-    font-size: 20px !important;
+    font-size: 1.25rem !important;
 }
 .remove-width{
     margin-left: 5% !important; 
@@ -125,4 +126,8 @@ p{
     z-index: 9;
     -webkit-transition: all .2s ease-out;
     transition: all .2s ease-out;
+}
+
+.rdt_TableHeader{
+    display: none !important;
 }
