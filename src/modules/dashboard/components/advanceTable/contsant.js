@@ -102,7 +102,14 @@ export const columns = [
         status: "fail",
         avatar: "https://lh5.googleusercontent.com/-13SFS5l_xoE/AAAAAAAAAAI/AAAAAAAABIA/wrANEDB_9n4kcITtO1lWF-KQkCUmfNz7wCLcDEAE/s80-c-k-no-mo/photo.jpg"
     },
-
+    {
+      name: 'Sriya Pathak',
+      card: '**** 2016',
+      date: '29.03.2019',
+      amount: '$6,542.42',
+      status: "paid",
+      avatar: "https://i.postimg.cc/DfJxvmDm/placeholder.jpg"
+  },
   ]
 
   export const TransColumns = [
