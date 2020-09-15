@@ -11,6 +11,7 @@ import Logout from "./pages/logout/Logout";
 import ConfirmMail from "./pages/confirmMail/ConfirmMail";
 import GeneralUi from "./modules/dashboard/components/generalUi/GeneralUi";
 import InternalServerError from "./pages/internalServerError/InternalServerError";
+import Demo from "./modules/Demo";
 
 class Routes extends React.PureComponent {
   render() {
@@ -20,6 +21,8 @@ class Routes extends React.PureComponent {
           <Route exact path="/">
           {/* <SignIn /> */}
           <Dashboard/>
+            <Demo />
+          {/* <SignIn /> */}
           </Route>
           <Route exact path="/register">
             <Register />

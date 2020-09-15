@@ -10,11 +10,11 @@ class TopHeader extends React.PureComponent {
                 {isGeneralUi ? 'General UI' : 'Dashboard 2'}
                 </Typography>
                 <Box display="flex">
-       <Breadcrumb>
+       {/* <Breadcrumb>
      <StyledBreadcrumb.Item href="#">Stack UI</StyledBreadcrumb.Item>
      <StyledBreadcrumb.Item href="#">Dashboard</StyledBreadcrumb.Item>
      <StyledBreadcrumb.Item active>Dashboard 2</StyledBreadcrumb.Item>
-</Breadcrumb>  
+</Breadcrumb>   */}
 </Box>
             </Box>
         )
