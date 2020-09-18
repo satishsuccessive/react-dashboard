@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Card, Typography, Icon, Image } from "@stack-ui/components";
+import { Box, Card, Typography, Icon, Image, Menu } from "@stack-ui/components";
 import { EARNING_CHART } from "../../../../utils/constant";
 
 const EarningReports = () => {
@@ -11,7 +11,16 @@ const EarningReports = () => {
   const earningReportCalculation = {current: '$120,254', last: '$98,741' }
   return (
     <Box mr="20px"  width="33%" className="earning-header">
-      <Card cardTitle="Earning Reports">
+      <Card cardTitle="Earning Reports" cardMenu={<Menu btnType="menu" iconOption options={[{
+        headerText: 'Header-Text'
+      }, {
+        item: 'HTML'
+      }, {
+        item: 'CSS'
+      }, {
+        item: 'Javascript',
+        isDivider: true
+      }]} />}>
         <Box mb="15px">
           <Typography as="span">{earningData}</Typography>
         </Box>
