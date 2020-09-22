@@ -16,10 +16,7 @@ class ConfirmMail extends React.PureComponent {
       <Box
         pt="70px"
         className="bg-height"
-        style={{
-          background: "url('/images/bg-pattern.png') no-repeat center",
-          backgroundSize: "cover",
-        }}
+        bgImg="url('/images/bg-pattern.png')"
       >
         <Box width="31.4%" ml="auto" mr="auto">
           <Box bgColor="#fff" p="35px 0" mb="25px">
@@ -55,7 +52,7 @@ class ConfirmMail extends React.PureComponent {
 
           </Box>
           <Box mb="20px">
-          <Typography as="span" color="#98a6ad" textAlign="center">
+          <Typography as="span" className="footerStyle" color="#98a6ad" textAlign="center">
           2019 © Upvex theme by <Link to="/">Coderthemes</Link>
           </Typography>
           </Box>

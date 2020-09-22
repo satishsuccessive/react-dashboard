@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Typography } from '@stack-ui/components';
+import { Box, Typography , StyledBreadcrumb,Breadcrumb} from '@stack-ui/components';
 
 class TopHeader extends React.PureComponent {
     render() {
@@ -9,7 +9,13 @@ class TopHeader extends React.PureComponent {
                 <Typography as="h3" isBold>
                 {isGeneralUi ? 'General UI' : 'Dashboard 2'}
                 </Typography>
-                <Typography as="h5">Stack UI > Dashboard > Dashboard 2</Typography>
+                <Box display="flex">
+       <Breadcrumb>
+     <StyledBreadcrumb.Item href="#">Stack UI</StyledBreadcrumb.Item>
+     <StyledBreadcrumb.Item href="#">Dashboard</StyledBreadcrumb.Item>
+     <StyledBreadcrumb.Item active>Dashboard 2</StyledBreadcrumb.Item>
+</Breadcrumb>  
+</Box>
             </Box>
         )
     }

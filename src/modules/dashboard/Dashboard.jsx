@@ -1,58 +1,80 @@
-import React from 'react';
-import { Box } from '@stack-ui/components'
-import { Sidebar, Chart, TopHeader, UpdateAverage, RightSidebar } from './components';
-import  {HeaderWrapper}  from "../../modules/header";
-import GeneralUi from './components/generalUi/GeneralUi';
-import EarningReports from './components/earningReports/EarningReports';
+import React from "react";
+import { Box } from "@stack-ui/components";
+import {
+  Sidebar,
+  Chart,
+  TopHeader,
+  UpdateAverage,
+  RightSidebar,
+} from "./components";
+import { HeaderWrapper } from "../../modules/header";
+import GeneralUi from "./components/generalUi/GeneralUi";
+import EarningReports from "./components/earningReports/EarningReports";
+import AdvanceTable from "./components/advanceTable/AdvanceTable";
 
 class Dashboard extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      sidebarToggle : false,
-      enable:false,
-
+      sidebarToggle: false,
+      enable: false,
     };
   }
   handleToggleEvent = (e) => {
     const { sidebarToggle } = this.state;
     this.setState({
       sidebarToggle: !sidebarToggle,
-    })
-  }
+    });
+  };
   handleEnabledFun = (e) => {
     const { enable } = this.state;
     this.setState({
       enable: !enable,
-    })
-  }
+    });
+  };
 
   render() {
     const { isGeneralUi } = this.props;
-    const { sidebarToggle,enable } = this.state
+    const { sidebarToggle, enable } = this.state;
     return (
       <>
-      <Box className= {`${enable ? "rightbar-overlay" : ""}`}></Box>
-       <HeaderWrapper 
-       handleToggleEvent={this.handleToggleEvent}
-       sidebarToggle={sidebarToggle}
-       handleEnabledFun={this.handleEnabledFun}
-       enable={enable}
-       />
-      <Box ml="16%" p="20px" background="#f5f6f8" className= {`${sidebarToggle ? "remove-width" : "add-width"}`}>
-        <TopHeader isGeneralUi={isGeneralUi} />
-        {isGeneralUi ? (<GeneralUi />) : (<><UpdateAverage /><Chart /><EarningReports /></>)}
-        <Sidebar sidebarToggle={sidebarToggle}
-        handleToggleEvent={this.handleToggleEvent}
+        <Box className={`${enable ? "rightbar-overlay" : ""}`}></Box>
+        <HeaderWrapper
+          handleToggleEvent={this.handleToggleEvent}
+          sidebarToggle={sidebarToggle}
+          handleEnabledFun={this.handleEnabledFun}
+          enable={enable}
         />
-        <RightSidebar 
-         enable={this.state.enable}
-         handleEnabledFun={this.handleEnabledFun}
-
-        />
-      </Box>
+        <Box
+          ml="16%"
+          p="20px"
+          background="#f5f6f8"
+          className={`${sidebarToggle ? "remove-width" : "add-width"}`}
+        >
+          <TopHeader isGeneralUi={isGeneralUi} />
+          {isGeneralUi ? (
+            <GeneralUi />
+          ) : (
+            <>
+              <UpdateAverage />
+              <Chart />
+              <Box display="flex" justifyContent="space-between" p="10px">
+                <EarningReports />
+                <AdvanceTable />
+              </Box>
+            </>
+          )}
+          <Sidebar
+            sidebarToggle={sidebarToggle}
+            handleToggleEvent={this.handleToggleEvent}
+          />
+          <RightSidebar
+            enable={this.state.enable}
+            handleEnabledFun={this.handleEnabledFun}
+          />
+        </Box>
       </>
-    )
+    );
   }
 }
 export default Dashboard;

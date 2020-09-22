@@ -1,5 +1,5 @@
 import React from 'react'
-import { SearchBox, Box, Avatar, Button, Header, Icon , DropDown} from '@stack-ui/components';
+import { SearchBox, Box, Avatar, Button, Header, Icon , Menu} from '@stack-ui/components';
 import { Link } from 'react-router-dom';
 import { StyledHeader } from './style';
 
@@ -72,9 +72,9 @@ class HeaderWrapper extends React.PureComponent {
         <Header mode="light" fixed className="xx">
           <Box display="flex" justifyContent="space-between" p="0px">
             <Box display="flex" alignItems="center" style={{ color: "#000" }} p="0px" ml="250px" className= {`${sidebarToggle ? "remove" : "add"}`}>
-            <Icon  onClick={handleToggleEvent} style={{cursor:'pointer'}} icon="align-left" />
+            <Icon  onClick={handleToggleEvent} style={{cursor:'pointer', height:"20px"}} icon="align-left" />
             <Box display="flex" alignItems="center">
-                <DropDown value="Report" icon="chevron-down" btnType="default"  Iconsize="sm"
+                <Menu value="Report" icon="chevron-down" btnType="default"  Iconsize="sm"
                 options={this.reportOption}/>
                 </Box>
             </Box>
@@ -94,7 +94,7 @@ class HeaderWrapper extends React.PureComponent {
                 <Avatar size="sm" src="https://coderthemes.com/upvex/layouts/light/assets/images/users/user-1.jpg" alt="smallAvatar" />
                 </Box>
                 <Box className="dropBox" p="0" display="flex" alignItems="center">
-                <DropDown style={{padding:'0'}} value="Marcia J." icon="chevron-down" btnType="default"  Iconsize="sm"
+                <Menu style={{padding:'0'}} value="Marcia J." icon="chevron-down" btnType="default"  Iconsize="sm"
                  options={this.accountoptions}/>
                 </Box>
               </Box>

@@ -81,7 +81,7 @@ export const sidebarNav = [
     {
         sidebarText: "Extra Pages",
         iconLeft: "symbol-diamond",
-        iconRight:<Badge variant="warning">New</Badge> ,
+        BadgeIcon:<Badge variant="danger">New</Badge> ,
     },{
         sidebarText: "UI Elements",
         iconLeft: "briefcase",
@@ -93,7 +93,8 @@ export const sidebarNav = [
     },{
         sidebarText: "Admin UI",
         iconLeft: "volume-up",
-        iconRight: <Badge variant="info">Hot</Badge> ,
+        iconRight:"chevron-right",
+        BadgeIcon:<Badge variant="info">Hot</Badge>
     },{
         sidebarText: "Icons",
         sidebarLink: "/dashboard",

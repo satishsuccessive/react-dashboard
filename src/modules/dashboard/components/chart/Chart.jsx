@@ -44,7 +44,7 @@ class Chart extends React.PureComponent {
         </Box>
         <Box display="flex" justifyContent="space-between" p='10px'>
         <Box mr="20px" width="50%">
-          <Card cardTitle="Donut and Radar Chart">
+          <Card cardTitle="Donut Chart" style={{'height':"100%"}}>
           <Box p="20px">
           <StackChart type="donut" width={400} height={320} options={{
   chart: {
@@ -59,52 +59,22 @@ class Chart extends React.PureComponent {
           </Card>
           </Box>
           <Box width="50%">
-          <Card cardTitle="Simple Table">
+          <Card cardTitle="Radar chart"  style={{'height':"100%"}}>
           <Box p="20px">
-          <Table striped bordered hover responsive >
-    <thead>
-        <tr>
-        <th>#</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Username</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-        <td>1</td>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        </tr>
-        
-        <tr>
-        <td>2</td>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-        </tr>
-        <tr>
-        <td>3</td>
-        <td colSpan="2">Larry the Bird</td>
-        <td>@twitter</td>
-        </tr>
-    </tbody>
-    <tbody>
-        <tr>
-        <td>4</td>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-        </tr>
-        <tr>
-        <td>5</td>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-        </tr>
-    </tbody>
-</Table>
+          <StackChart type="radar" width={500} height={320} options={{
+  chart: {
+    id: 'apexchart-example'
+  },
+  xaxis: {
+    categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998]
+  }
+}} series={[{
+  name: "Radar Series 1",
+  data: [45, 52, 38, 24, 33, 10]
+}, {
+  name: "Radar Series 2",
+  data: [26, 21, 20, 6, 8, 15]
+}]} />
           </Box>
           </Card>
           </Box>
