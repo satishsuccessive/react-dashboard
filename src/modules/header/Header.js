@@ -74,8 +74,8 @@ class HeaderWrapper extends React.PureComponent {
             <Box display="flex" alignItems="center" style={{ color: "#000" }} p="0px" ml="250px" className= {`${sidebarToggle ? "remove" : "add"}`}>
             <Icon  onClick={handleToggleEvent} style={{cursor:'pointer'}} icon="align-left" />
             <Box display="flex" alignItems="center">
-                <DropDown value="Report" icon="chevron-down" btnType="default"  Iconsize="sm"
-                options={this.reportOption}/>
+                {/* <DropDown value="Report" icon="chevron-down" btnType="default"  Iconsize="sm"
+                options={this.reportOption}/> */}
                 </Box>
             </Box>
             <Box style={{ color: "#000" }} p="0px" m="0px" display="flex" alignItems="center">
@@ -94,8 +94,8 @@ class HeaderWrapper extends React.PureComponent {
                 <Avatar size="sm" src="https://coderthemes.com/upvex/layouts/light/assets/images/users/user-1.jpg" alt="smallAvatar" />
                 </Box>
                 <Box className="dropBox" p="0" display="flex" alignItems="center">
-                <DropDown style={{padding:'0'}} value="Marcia J." icon="chevron-down" btnType="default"  Iconsize="sm"
-                 options={this.accountoptions}/>
+                {/* <DropDown style={{padding:'0'}} value="Marcia J." icon="chevron-down" btnType="default"  Iconsize="sm"
+                 options={this.accountoptions}/> */}
                 </Box>
               </Box>
               <Box p="0px" m="0px">
