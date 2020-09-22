@@ -15,10 +15,7 @@ class Error extends React.PureComponent {
       <Box
         pt="70px"
         className="bg-height"
-        style={{
-          background: "url('/images/bg-pattern.png') no-repeat center",
-          backgroundSize: "cover",
-        }}
+        bgImg="url('/images/bg-pattern.png')"
       >
         <Box width="31.4%" ml="auto" mr="auto">
           <Box bgColor="#fff" p="35px 0">
