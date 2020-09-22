@@ -17,7 +17,7 @@ class Routes extends React.PureComponent {
     return (
       <Router>
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/react-dashboard">
           {/* <SignIn /> */}
           <Dashboard/>
           </Route>
