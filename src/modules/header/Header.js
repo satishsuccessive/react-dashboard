@@ -72,7 +72,7 @@ class HeaderWrapper extends React.PureComponent {
         <Header mode="light" fixed className="xx">
           <Box display="flex" justifyContent="space-between" p="0px">
             <Box display="flex" alignItems="center" style={{ color: "#000" }} p="0px" ml="250px" className= {`${sidebarToggle ? "remove" : "add"}`}>
-            <Icon  onClick={handleToggleEvent} style={{cursor:'pointer'}} icon="align-left" />
+            <Icon  onClick={handleToggleEvent} style={{cursor:'pointer', height:"20px"}} icon="align-left" />
             <Box display="flex" alignItems="center">
                 <Menu value="Report" icon="chevron-down" btnType="default"  Iconsize="sm"
                 options={this.reportOption}/>

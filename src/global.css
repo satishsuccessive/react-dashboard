@@ -134,3 +134,9 @@ p{
 .breadcrumb{
     font-size: 13px;
 }
+.footerStyle{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+}

@@ -67,9 +67,9 @@ class SidebarComponent extends React.PureComponent {
       </Box>
       </Box>
       <Box p="20px" style={{borderTop:"1px solid #f7f7f7", borderBottom:"1px solid #f7f7f7"}}>
-      <Box mb="10px"><Switch color ="#6c757d" isBold="500" defaultIsChecked="true" label="Notifications"/></Box>
+      <Box mb="10px"><Switch color ="#6c757d" isBold="500" isChecked label="Notifications"/></Box>
       <Box  mb="10px"><Switch color ="#6c757d"  isBold="500" label="API Access"/></Box>
-      <Box  mb="10px"><Switch color ="#6c757d" isBold="500" defaultIsChecked="true" label="Auto Updates"/></Box>
+      <Box  mb="10px"><Switch color ="#6c757d" isBold="500" isChecked label="Auto Updates"/></Box>
       <Box  mb="10px"><Switch color ="#6c757d" isBold="500" label="Online Status"/></Box>
 
       </Box>

@@ -24,10 +24,7 @@ class SignIn extends React.PureComponent {
       <Box
         pt="70px"
         className="bg-height"
-        style={{
-          background: "url('/images/bg-pattern.png') no-repeat center",
-          backgroundSize: "cover",
-        }}
+        bgImg="url('/images/bg-pattern.png')"
       >
         <Box width="31.4%" ml="auto" mr="auto">
           <Box bgColor="#fff" p="35px 0">
@@ -89,13 +86,13 @@ class SignIn extends React.PureComponent {
           <Box m="20px 0" textAlign="center">
             <Link to="/recover-password">Forgot your password?</Link>
           </Box>
-          <Box mb="100px">
-          <Typography as="span" color="#98a6ad" textAlign="center">
+          <Box mb="100px" pt="10px" textAlign="center">
+          <Typography as="span" color="#98a6ad">
             Don't have an account? <Link to="/register">Sign Up</Link>
           </Typography>
           </Box>
           <Box mb="20px">
-          <Typography as="span" color="#98a6ad" textAlign="center">
+          <Typography as="span" className="footerStyle" color="#98a6ad" textAlign="center">
           2019 © Upvex theme by <Link to="/">Coderthemes</Link>
           </Typography>
           </Box>
